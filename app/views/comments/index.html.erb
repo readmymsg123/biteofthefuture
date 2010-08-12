@@ -1,0 +1,24 @@
+<h1>Listing comments</h1>
+
+<table>
+  <tr>
+    <th>Post</th>
+    <th>Title</th>
+    <th>Message</th>
+  </tr>
+
+<% @comments.each do |comment| %>
+  <tr>
+    <td><%=h comment.post_id %></td>
+    <td><%=h comment.title %></td>
+    <td><%=h comment.message %></td>
+    <td><%= link_to 'Show', post_comments_path %></td>
+    <td><%= link_to 'Edit', [:edit, @post, comment]%></td>
+    <td><%= link_to 'Destroy', [@post, comment], :confirm => 'Are you sure?', :method => :delete %></td>
+  </tr>
+<% end %>
+</table>
+
+<br />
+
+<%= link_to 'New comment', :controller => "comments", :action => "new" %>
