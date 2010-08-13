@@ -13,7 +13,7 @@
 
 <%= stylesheet_link_tag "NewHorizon"%>
 
-<title>New Horizon</title>
+<title><%= h(yield(:title) || "BiteOfTheFuture") %></title>
 	
 </head>
 
@@ -24,10 +24,19 @@
 		
 		<ul>
 			<li id="current"><a href="index.html">Home</a></li>
-			<li><a href="index.html">News</a></li>
+			<li><%= link_to "Tags", tags_path %></li>
 			<li><a href="index.html">Downloads</a></li>
 			<li><a href="index.html">Support</a></li>
 			<li><a href="index.html">About</a></li>			
+			<% if current_user %> 
+				<li><%= link_to "Edit Profile", edit_user_path(current_user) %></li>
+				<li><%= link_to "Logout", logout_path%>
+			<% else %>
+				<li><%= link_to "Register", new_user_path %>
+				<li><%= link_to "Login", login_path %>	
+			<% end%>
+					
+				
 		</ul>
 	
 	</div>
@@ -38,7 +47,7 @@
 		<div id="clouds"></div>
 		
 		<h1 id="logo-text"><a href="index.html" title="">BiteOfTheFuture</a></h1>	
-		<p id="slogan">For tomorrow belongs to the people of today...</p>				
+		<p id="slogan">Tomorrow belongs to the people of today...</p>				
 	
 	</div>	
 				
@@ -90,6 +99,10 @@
 		
 		</div>	
 	
+		<%- flash.each do |name, msg| -%>
+	        <%= content_tag :div, msg, :id => "flash_#{name}" %>
+	  <%- end -%>
+		
 		<div id="main">		
 				
 				<%= yield %>
@@ -98,27 +111,6 @@
 			<a name="SampleTags"></a>
 			<h2><a href="index.html">Sample Tags</a></h2>
 							
-			<h3>Code</h3>				
-
-			<p><code>
-				code-sample { <br />
-				font-weight: bold;<br />
-				font-style: italic;<br />				
-				}
-			</code></p>	
-			
-			<h3>Example Lists</h3>
-		
-			<ol>
-				<li>Here is an example</li>
-				<li>of an ordered list</li>								
-			</ol>	
-							
-			<ul>
-				<li>Here is an example</li>
-				<li>of an unordered list</li>								
-			</ul>			
-			
 			<h3>Blockquote</h3>			
 				
 			<blockquote><p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy 

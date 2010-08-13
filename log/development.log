@@ -11647,3 +11647,1769 @@ Rendering posts/index
   [4;36;1mTag Load (0.1ms)[0m   [0;1mSELECT "tags".* FROM "tags" INNER JOIN "taggings" ON "tags".id = "taggings".tag_id WHERE (("taggings".taggable_id = 19) AND ("taggings".taggable_type = 'Post')) [0m
   [4;35;1mTag Load (0.2ms)[0m   [0mSELECT "tags".* FROM "tags" INNER JOIN "taggings" ON "tags".id = "taggings".tag_id WHERE (("taggings".taggable_id = 20) AND ("taggings".taggable_type = 'Post')) [0m
 Completed in 130ms (View: 104, DB: 4) | 200 OK [http://localhost/posts]
+
+
+Processing PostsController#index (for 127.0.0.1 at 2010-08-12 17:01:40) [GET]
+Redirected to http://localhost:3000/login
+
+
+Processing UserSessionsController#new (for 127.0.0.1 at 2010-08-12 17:01:40) [GET]
+Rendering template within layouts/application
+Rendering user_sessions/new
+Completed in 24ms (View: 11, DB: 0) | 200 OK [http://localhost/login]
+
+
+Processing UserSessionsController#create (for 127.0.0.1 at 2010-08-12 17:02:55) [POST]
+  Parameters: {"commit"=>"Save changes", "user_session"=>{"username"=>"admin", "password"=>"admin"}, "authenticity_token"=>"zSohxNuZF5488FNhliwP7csiUG6fpD2iZxbB8mk7Vp0="}
+  [4;36;1mUser Load (0.5ms)[0m   [0;1mSELECT * FROM "users" WHERE (LOWER("users".username) = 'admin') LIMIT 1[0m
+  [4;35;1mUser Update (0.3ms)[0m   [0mUPDATE "users" SET "failed_login_count" = 1, "updated_at" = '2010-08-12 22:02:55' WHERE "id" = 3[0m
+Rendering template within layouts/application
+Rendering user_sessions/new
+Completed in 179ms (View: 5, DB: 1) | 200 OK [http://localhost/user_sessions]
+
+
+Processing UserSessionsController#create (for 127.0.0.1 at 2010-08-12 17:03:02) [POST]
+  Parameters: {"commit"=>"Save changes", "user_session"=>{"username"=>"admin", "password"=>"adminrocks"}, "authenticity_token"=>"zSohxNuZF5488FNhliwP7csiUG6fpD2iZxbB8mk7Vp0="}
+  [4;36;1mUser Load (0.4ms)[0m   [0;1mSELECT * FROM "users" WHERE (LOWER("users".username) = 'admin') LIMIT 1[0m
+  [4;35;1mUser Update (0.3ms)[0m   [0mUPDATE "users" SET "login_count" = 20, "failed_login_count" = 0, "updated_at" = '2010-08-12 22:03:02', "last_login_at" = '2010-08-12 10:15:11', "current_login_at" = '2010-08-12 22:03:02' WHERE "id" = 3[0m
+Redirected to http://localhost:3000/posts
+Completed in 46ms (DB: 1) | 302 Found [http://localhost/user_sessions]
+
+
+Processing PostsController#index (for 127.0.0.1 at 2010-08-12 17:03:02) [GET]
+  [4;36;1mUser Load (0.4ms)[0m   [0;1mSELECT * FROM "users" WHERE ("users"."id" = '3') LIMIT 1[0m
+  [4;35;1mPost Load (1.0ms)[0m   [0mSELECT * FROM "posts" [0m
+Rendering template within layouts/application
+Rendering posts/index
+  [4;36;1mTag Load (0.3ms)[0m   [0;1mSELECT "tags".* FROM "tags" INNER JOIN "taggings" ON "tags".id = "taggings".tag_id WHERE (("taggings".taggable_id = 1) AND ("taggings".taggable_type = 'Post')) [0m
+  [4;35;1mTag Load (0.1ms)[0m   [0mSELECT "tags".* FROM "tags" INNER JOIN "taggings" ON "tags".id = "taggings".tag_id WHERE (("taggings".taggable_id = 2) AND ("taggings".taggable_type = 'Post')) [0m
+  [4;36;1mTag Load (0.1ms)[0m   [0;1mSELECT "tags".* FROM "tags" INNER JOIN "taggings" ON "tags".id = "taggings".tag_id WHERE (("taggings".taggable_id = 3) AND ("taggings".taggable_type = 'Post')) [0m
+  [4;35;1mTag Load (0.1ms)[0m   [0mSELECT "tags".* FROM "tags" INNER JOIN "taggings" ON "tags".id = "taggings".tag_id WHERE (("taggings".taggable_id = 4) AND ("taggings".taggable_type = 'Post')) [0m
+  [4;36;1mTag Load (0.1ms)[0m   [0;1mSELECT "tags".* FROM "tags" INNER JOIN "taggings" ON "tags".id = "taggings".tag_id WHERE (("taggings".taggable_id = 8) AND ("taggings".taggable_type = 'Post')) [0m
+  [4;35;1mTag Load (0.1ms)[0m   [0mSELECT "tags".* FROM "tags" INNER JOIN "taggings" ON "tags".id = "taggings".tag_id WHERE (("taggings".taggable_id = 9) AND ("taggings".taggable_type = 'Post')) [0m
+  [4;36;1mTag Load (0.2ms)[0m   [0;1mSELECT "tags".* FROM "tags" INNER JOIN "taggings" ON "tags".id = "taggings".tag_id WHERE (("taggings".taggable_id = 10) AND ("taggings".taggable_type = 'Post')) [0m
+  [4;35;1mTag Load (0.1ms)[0m   [0mSELECT "tags".* FROM "tags" INNER JOIN "taggings" ON "tags".id = "taggings".tag_id WHERE (("taggings".taggable_id = 11) AND ("taggings".taggable_type = 'Post')) [0m
+  [4;36;1mTag Load (0.1ms)[0m   [0;1mSELECT "tags".* FROM "tags" INNER JOIN "taggings" ON "tags".id = "taggings".tag_id WHERE (("taggings".taggable_id = 12) AND ("taggings".taggable_type = 'Post')) [0m
+  [4;35;1mTag Load (0.1ms)[0m   [0mSELECT "tags".* FROM "tags" INNER JOIN "taggings" ON "tags".id = "taggings".tag_id WHERE (("taggings".taggable_id = 13) AND ("taggings".taggable_type = 'Post')) [0m
+  [4;36;1mTag Load (0.1ms)[0m   [0;1mSELECT "tags".* FROM "tags" INNER JOIN "taggings" ON "tags".id = "taggings".tag_id WHERE (("taggings".taggable_id = 15) AND ("taggings".taggable_type = 'Post')) [0m
+  [4;35;1mTag Load (0.1ms)[0m   [0mSELECT "tags".* FROM "tags" INNER JOIN "taggings" ON "tags".id = "taggings".tag_id WHERE (("taggings".taggable_id = 16) AND ("taggings".taggable_type = 'Post')) [0m
+  [4;36;1mTag Load (0.3ms)[0m   [0;1mSELECT "tags".* FROM "tags" INNER JOIN "taggings" ON "tags".id = "taggings".tag_id WHERE (("taggings".taggable_id = 17) AND ("taggings".taggable_type = 'Post')) [0m
+  [4;35;1mTag Load (0.2ms)[0m   [0mSELECT "tags".* FROM "tags" INNER JOIN "taggings" ON "tags".id = "taggings".tag_id WHERE (("taggings".taggable_id = 18) AND ("taggings".taggable_type = 'Post')) [0m
+  [4;36;1mTag Load (0.1ms)[0m   [0;1mSELECT "tags".* FROM "tags" INNER JOIN "taggings" ON "tags".id = "taggings".tag_id WHERE (("taggings".taggable_id = 19) AND ("taggings".taggable_type = 'Post')) [0m
+  [4;35;1mTag Load (0.1ms)[0m   [0mSELECT "tags".* FROM "tags" INNER JOIN "taggings" ON "tags".id = "taggings".tag_id WHERE (("taggings".taggable_id = 20) AND ("taggings".taggable_type = 'Post')) [0m
+Completed in 141ms (View: 60, DB: 4) | 200 OK [http://localhost/posts]
+
+
+Processing PostsController#show (for 127.0.0.1 at 2010-08-12 17:03:08) [GET]
+  Parameters: {"id"=>"20"}
+  [4;36;1mUser Load (0.4ms)[0m   [0;1mSELECT * FROM "users" WHERE ("users"."id" = '3') LIMIT 1[0m
+  [4;35;1mPost Load (0.2ms)[0m   [0mSELECT * FROM "posts" WHERE ("posts"."id" = 20) [0m
+  [4;36;1mComment Load (0.1ms)[0m   [0;1mSELECT * FROM "comments" WHERE ("comments"."post_id" = 20) [0m
+Rendering template within layouts/application
+Rendering posts/show
+Completed in 31ms (View: 5, DB: 1) | 200 OK [http://localhost/posts/20]
+
+
+Processing PostsController#images to jpg (for 127.0.0.1 at 2010-08-12 17:03:08) [GET]
+  Parameters: {"id"=>"firefox-gray"}
+  [4;35;1mUser Load (0.4ms)[0m   [0mSELECT * FROM "users" WHERE ("users"."id" = '3') LIMIT 1[0m
+
+ActionController::UnknownAction (No action responded to images. Actions: create, destroy, edit, index, new, show, and update):
+  /Users/alexwang/.rvm/rubies/ruby-1.8.7-p299/lib/ruby/1.8/webrick/httpserver.rb:104:in `service'
+  /Users/alexwang/.rvm/rubies/ruby-1.8.7-p299/lib/ruby/1.8/webrick/httpserver.rb:65:in `run'
+  /Users/alexwang/.rvm/rubies/ruby-1.8.7-p299/lib/ruby/1.8/webrick/server.rb:173:in `start_thread'
+  /Users/alexwang/.rvm/rubies/ruby-1.8.7-p299/lib/ruby/1.8/webrick/server.rb:162:in `start'
+  /Users/alexwang/.rvm/rubies/ruby-1.8.7-p299/lib/ruby/1.8/webrick/server.rb:162:in `start_thread'
+  /Users/alexwang/.rvm/rubies/ruby-1.8.7-p299/lib/ruby/1.8/webrick/server.rb:95:in `start'
+  /Users/alexwang/.rvm/rubies/ruby-1.8.7-p299/lib/ruby/1.8/webrick/server.rb:92:in `each'
+  /Users/alexwang/.rvm/rubies/ruby-1.8.7-p299/lib/ruby/1.8/webrick/server.rb:92:in `start'
+  /Users/alexwang/.rvm/rubies/ruby-1.8.7-p299/lib/ruby/1.8/webrick/server.rb:23:in `start'
+  /Users/alexwang/.rvm/rubies/ruby-1.8.7-p299/lib/ruby/1.8/webrick/server.rb:82:in `start'
+
+Rendering rescues/layout (not_found)
+
+
+Processing UserSessionsController#new (for 127.0.0.1 at 2010-08-12 17:13:31) [GET]
+Rendering template within layouts/application
+Rendering user_sessions/new
+ERROR: compiling _run_erb_app47views47layouts47application46html46erb RAISED compile error
+/Users/alexwang/biteofthefuture/app/views/layouts/application.html.erb:255: syntax error, unexpected kENSURE, expecting kEND
+/Users/alexwang/biteofthefuture/app/views/layouts/application.html.erb:257: syntax error, unexpected $end
+Function body:           def _run_erb_app47views47layouts47application46html46erb(local_assigns)
+            old_output_buffer = output_buffer;;@output_buffer = '';  __in_erb_template=true ; @output_buffer.concat "<!DOCTYPE html PUBLIC \"-//W3C//DTD XHTML 1.0 Strict//EN\" \"http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd\">\n\n<html xmlns=\"http://www.w3.org/1999/xhtml\" xml:lang=\"en\" lang=\"en\">\n\n<head>\n\n<meta name=\"Description\" content=\"Information architecture, Web Design, Web Standards.\" />\n<meta name=\"Keywords\" content=\"your, keywords\" />\n<meta http-equiv=\"Content-Type\" content=\"text/html; charset=iso-8859-1\" />\n<meta name=\"Distribution\" content=\"Global\" />\n<meta name=\"Author\" content=\"Erwin Aligam - ealigam@gmail.com\" />\n<meta name=\"Robots\" content=\"index,follow\" />\t\t\n\n"
+
+
+
+
+
+
+
+
+
+
+
+
+; @output_buffer.concat(( stylesheet_link_tag "NewHorizon").to_s); @output_buffer.concat "\n\n<title>BiteOfTheFuture</title>\n\t\n</head>\n\n<body>\n\n\t<!-- navigation starts here -->\n\t<div id=\"nav\">\n\t\t\n\t\t<ul>\n\t\t\t<li id=\"current\"><a href=\"index.html\">Home</a></li>\n\t\t\t<li><a href=\"index.html\">News</a></li>\n\t\t\t<li><a href=\"index.html\">Downloads</a></li>\n\t\t\t<li><a href=\"index.html\">Support</a></li>\n\t\t\t<li><a href=\"index.html\">About</a></li>\t\t\t\n\t\t\t"
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+;  if current_user do ; @output_buffer.concat " \n\t\t\t\t<li>"
+; @output_buffer.concat(( link_to "Edit Profile", edit_user_path ).to_s); @output_buffer.concat "</li>\n\t\t\t\t\n\t\t\t\t\n\t\t</ul>\n\t\n\t</div>\n\n\t<!-- header starts here -->\n\t<div id=\"header\">\t\n\t\n\t\t<div id=\"clouds\"></div>\n\t\t\n\t\t<h1 id=\"logo-text\"><a href=\"index.html\" title=\"\">BiteOfTheFuture</a></h1>\t\n\t\t<p id=\"slogan\">For tomorrow belongs to the people of today...</p>\t\t\t\t\n\t\n\t</div>\t\n\t\t\t\t\n\t<!-- content-wrap starts here -->\n\t<div id=\"content-wrap\"><div id=\"content\">\t \n\t\n\t\t<div id=\"sidebar\" >\t\n\t\t\n\t\t\t<h3>Search Box</h3>\t\n\t\t\t<form action=\"#\" class=\"searchform\">\n\t\t\t\t<p>\n\t\t\t\t\t<input name=\"search_query\" class=\"textbox\" type=\"text\" />\n  \t\t\t\t\t<input name=\"search\" class=\"button\" value=\"Search\" type=\"submit\" />\n\t\t\t\t</p>\t\t\t\n\t\t\t</form>\n\t\t\t\t\n\t\t\t<h3>Sidebar Menu</h3>\t\t\t\n\t\t\t<ul class=\"sidemenu\">\n\t\t\t\t<li><a href=\"index.html\">Home</a></li>\n\t\t\t\t<li><a href=\"#TemplateInfo\">TemplateInfo</a></li>\n\t\t\t\t<li><a href=\"#SampleTags\">Sample Tags</a></li>\n\t\t\t\t<li><a href=\"http://www.styleshout.com/\">More Templates</a> </li>\n\t\t\t\t<li><a href=\"http://www.dreamtemplate.com\" title=\"Web Templates\">Web Templates</a></li>\n\t\t\t</ul>\t\n\t\t\t\t\n\t\t\t\t\n\t\t\t<h3>Sponsors</h3>\n\t\t\t<ul class=\"sidemenu\">\n\t\t\t\t<li><a href=\"http://www.dreamtemplate.com\" title=\"Website Templates\">DreamTemplate</a></li>\n\t\t\t\t<li><a href=\"http://www.themelayouts.com\" title=\"WordPress Themes\">ThemeLayouts</a></li>\n\t\t\t\t<li><a href=\"http://www.imhosted.com\" title=\"Website Hosting\">ImHosted.com</a></li>\n\t\t\t\t<li><a href=\"http://www.dreamstock.com\" title=\"Stock Photos\">DreamStock</a></li>\n\t\t\t\t<li><a href=\"http://www.evrsoft.com\" title=\"Website Builder\">Evrsoft</a></li>\n\t\t\t\t<li><a href=\"http://www.webhostingwp.com\" title=\"Web Hosting\">Web Hosting</a></li>\n\t\t\t</ul>\n\t\t\t\t\n\t\t\t<h3>Wise Words</h3>\n\t\t\t<p>&quot;Cherish your visions and your dreams as they are the children of your soul; \n\t\t\tthe blue prints of your ultimate achievements.&quot;</p>\t\t\n\t\t\t\n\t\t\t<p class=\"align-right\">- Napoleon Hill</p>\t\t\n\t\t\n\t\t\t<h3>Support Styleshout</h3>\t\t\t\n\t\t\t<p>If you are interested in supporting my work and would like to contribute, you are\n\t\t\twelcome to make a small donation through the \n\t\t\t<a href=\"http://www.styleshout.com/\">donate link</a> on my website - it will \n\t\t\tbe a great help and will surely be appreciated.\n\t\t\t</p>\t\n\t\t\n\t\t</div>\t\n\t\n\t\t<div id=\"main\">\t\t\n\t\t\t\t\n\t\t\t\t"
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+; @output_buffer.concat(( yield ).to_s); @output_buffer.concat "\n\t\t\n\t\t\t\t\t\t\n\t\t\t<a name=\"SampleTags\"></a>\n\t\t\t<h2><a href=\"index.html\">Sample Tags</a></h2>\n\t\t\t\t\t\t\t\n\t\t\t<h3>Code</h3>\t\t\t\t\n\n\t\t\t<p><code>\n\t\t\t\tcode-sample { <br />\n\t\t\t\tfont-weight: bold;<br />\n\t\t\t\tfont-style: italic;<br />\t\t\t\t\n\t\t\t\t}\n\t\t\t</code></p>\t\n\t\t\t\n\t\t\t<h3>Example Lists</h3>\n\t\t\n\t\t\t<ol>\n\t\t\t\t<li>Here is an example</li>\n\t\t\t\t<li>of an ordered list</li>\t\t\t\t\t\t\t\t\n\t\t\t</ol>\t\n\t\t\t\t\t\t\t\n\t\t\t<ul>\n\t\t\t\t<li>Here is an example</li>\n\t\t\t\t<li>of an unordered list</li>\t\t\t\t\t\t\t\t\n\t\t\t</ul>\t\t\t\n\t\t\t\n\t\t\t<h3>Blockquote</h3>\t\t\t\n\t\t\t\t\n\t\t\t<blockquote><p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy \n\t\t\tnibh euismod tincidunt ut laoreet dolore magna aliquam erat....</p></blockquote>\n\t\t\n\t\t\t<h3>Image and text</h3>\n\t\t\t\t\n\t\t\t<p>\n\t\t\t<a href=\"http://getfirefox.com/\"><img src=\"images/firefox-gray.jpg\" width=\"100\" height=\"121\" alt=\"firefox-gray\"  class=\"float-left\" /></a>\n\t\t\tLorem ipsum dolor sit amet, consectetuer adipiscing elit. Donec libero. Suspendisse bibendum. \n\t\t\tCras id urna. Morbi tincidunt, orci ac convallis aliquam, lectus turpis varius lorem, eu \n\t\t\tposuere nunc justo tempus leo. Donec mattis, purus nec placerat bibendum, dui pede condimentum \n\t\t\todio, ac blandit ante orci ut diam. Cras fringilla magna. Phasellus suscipit, leo a pharetra \n\t\t\tcondimentum, lorem tellus eleifend magna, eget fringilla velit magna id neque. Curabitur vel urna. \n\t\t\tIn tristique orci porttitor ipsum. Aliquam ornare diam iaculis nibh. Proin luctus, velit pulvinar \n\t\t\tullamcorper nonummy, mauris enim eleifend urna, congue egestas elit lectus eu est. \t\t\t\t\t\t\t\t\n\t\t\t</p>\n\t\t\t\n\t\t\t<h3>Table Styling</h3>\t\t\t\t\t\t\t\n\t\t\t\t\n\t\t\t<table>\n\t\t\t\t<tr>\n\t\t\t\t\t<th><strong>post</strong> date</th>\n\t\t\t\t\t<th>title</th>\n\t\t\t\t\t<th>description</th>\n\t\t\t\t</tr>\n\t\t\t\t<tr>\n\t\t\t\t\t<td>10.02.2007</td>\n\t\t\t\t\t<td><a href=\"index.html\">Augue non nibh</a></td>\n\t\t\t\t\t<td><a href=\"index.html\">Lobortis commodo metus vestibulum</a></td>\n\t\t\t\t</tr>\n\t\t\t\t<tr>\n\t\t\t\t\t<td>10.02.2007</td>\n\t\t\t\t\t<td><a href=\"index.html\">Fusce ut diam bibendum</a></td>\n\t\t\t\t\t<td><a href=\"index.html\">Purus in eget odio in sapien</a></td>\n\t\t\t\t</tr>\n\t\t\t\t<tr>\n\t\t\t\t\t<td>10.02.2007</td>\n\t\t\t\t\t<td><a href=\"index.html\">Maecenas et ipsum</a></td>\n\t\t\t\t\t<td><a href=\"index.html\">Adipiscing blandit quisque eros</a></td>\n\t\t\t\t</tr>\t\t\t\t\t\n\t\t\t</table>\n\t\t\t\n\t\t\t<h3>Example Form</h3>\n\t\t\t\t\n\t\t\t<form action=\"#\">\t\t\n\t\t\t\t<p>\n\t\t\t\t\t<label>Name</label>\n\t\t\t\t\t<input name=\"dname\" value=\"Your Name\" type=\"text\" size=\"30\" />\n\t\t\t\t\t<label>Email</label>\n\t\t\t\t\t<input name=\"demail\" value=\"Your Email\" type=\"text\" size=\"30\" />\n\t\t\t\t\t<label>Your Comments</label>\n\t\t\t\t\t<textarea rows=\"5\" cols=\"5\"></textarea>\n\t\t\t\t\t<br />\t\n\t\t\t\t\t<input class=\"button\" type=\"submit\" />\t\t\n\t\t\t\t</p>\t\t\n\t\t\t</form>\t\n\t\t\t\t\t\t\n\t\t\t<br />\n\t\t\t\t\t\t\t\t\t\t\n\t\t</div>\t\t\t\t\t\n\t\t\n\t<!-- content-wrap ends here -->\t\t\n\t</div></div>\n\n\t<!-- footer starts here-->\t\n\t<div id=\"footer-wrap\">\n\t\n\t\t<!-- columns starts here-->\t\t\n\t\t<div id=\"columns\">\n\t\n\t\t\t<div class=\"col3\">\n\t\t\t\t<h3>Tincidunt</h3>\n\t\t\t\t<ul>\n\t\t\t\t\t<li><a href=\"index.html\">consequat molestie</a></li>\n\t\t\t\t\t<li><a href=\"index.html\">sem justo</a></li>\n\t\t\t\t\t<li><a href=\"index.html\">semper</a></li>\n\t\t\t\t\t<li><a href=\"index.html\">magna sed purus</a></li>\n\t\t\t\t\t<li><a href=\"index.html\">tincidunt</a></li>\n\t\t\t\t</ul>\n\t\t\t</div>\n\t\t\t<div class=\"col3-center\">\n\t\t\t\t<h3>Sed purus</h3>\n\t\t\t\t<ul>\n\t\t\t\t\t<li><a href=\"index.html\">consequat molestie</a></li>\n\t\t\t\t\t<li><a href=\"index.html\">sem justo</a></li>\n\t\t\t\t\t<li><a href=\"index.html\">semper</a></li>\n\t\t\t\t\t<li><a href=\"index.html\">magna sed purus</a></li>\n\t\t\t\t\t<li><a href=\"index.html\">tincidunt</a></li>\n\t\t\t\t</ul>\n\t\t\t</div>\n\t\t\t<div class=\"col3\">\n\t\t\t\t<h3>Praesent</h3>\n\t\t\t\t<ul>\n\t\t\t\t\t<li><a href=\"index.html\">consequat molestie</a></li>\n\t\t\t\t\t<li><a href=\"index.html\">sem justo</a></li>\n\t\t\t\t\t<li><a href=\"index.html\">semper</a></li>\n\t\t\t\t\t<li><a href=\"index.html\">magna sed purus</a></li>\n\t\t\t\t\t<li><a href=\"index.html\">tincidunt</a></li>\t\t\t\t\t\n\t\t\t\t</ul>\n\t\t\t</div>\n\t\t\n\t\t<!-- columns ends -->\n\t\t</div>\t\n\t\n\t\t<div id=\"footer-bottom\">\t\t\n\t\t\t<p>\n\t\t\t&copy; 2010 <strong>Your Company</strong>\n\n            &nbsp;&nbsp;&nbsp;&nbsp;\n\n\t\t\t<a href=\"http://www.bluewebtemplates.com/\" title=\"Website Templates\">website templates</a> by <a href=\"http://www.styleshout.com/\">styleshout</a>\n\n\t\t\t&nbsp;&nbsp;&nbsp;&nbsp;\n\t\t\t\n\t\t\t<a href=\"index.html\">Home</a> |\n   \t\t    <a href=\"index.html\">Sitemap</a> |\n\t  \t\t<a href=\"index.html\">RSS Feed</a> |\n            <a href=\"http://validator.w3.org/check?uri=referer\">XHTML</a> |\n\t\t\t<a href=\"http://jigsaw.w3.org/css-validator/check/referer\">CSS</a>\n\t\t\t</p>\t\t\n\t\t</div>\t\n\t\n\t<!-- footer ends-->\t\t\n\t</div>\n\n</body>\n</html>\n"
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+; @output_buffer
+          ensure
+            self.output_buffer = old_output_buffer
+          end
+Backtrace: /Users/alexwang/biteofthefuture/app/views/layouts/application.html.erb:257:in `compile!'
+/Users/alexwang/.rvm/gems/ruby-1.8.7-p299/gems/actionpack-2.3.8/lib/action_view/renderable.rb:61:in `compile'
+/Users/alexwang/.rvm/gems/ruby-1.8.7-p299/gems/actionpack-2.3.8/lib/action_view/renderable.rb:28:in `render'
+/Users/alexwang/.rvm/gems/ruby-1.8.7-p299/gems/actionpack-2.3.8/lib/action_view/template.rb:205:in `render_template'
+/Users/alexwang/.rvm/gems/ruby-1.8.7-p299/gems/actionpack-2.3.8/lib/action_view/base.rb:265:in `render'
+/Users/alexwang/.rvm/gems/ruby-1.8.7-p299/gems/actionpack-2.3.8/lib/action_view/base.rb:352:in `_render_with_layout'
+/Users/alexwang/.rvm/gems/ruby-1.8.7-p299/gems/actionpack-2.3.8/lib/action_view/base.rb:262:in `render'
+/Users/alexwang/.rvm/gems/ruby-1.8.7-p299/gems/actionpack-2.3.8/lib/action_controller/base.rb:1250:in `render_for_file'
+/Users/alexwang/.rvm/gems/ruby-1.8.7-p299/gems/actionpack-2.3.8/lib/action_controller/base.rb:936:in `render_without_benchmark'
+/Users/alexwang/.rvm/gems/ruby-1.8.7-p299/gems/actionpack-2.3.8/lib/action_controller/benchmarking.rb:51:in `render'
+/Users/alexwang/.rvm/gems/ruby-1.8.7-p299/gems/activesupport-2.3.8/lib/active_support/core_ext/benchmark.rb:17:in `ms'
+/Users/alexwang/.rvm/rubies/ruby-1.8.7-p299/lib/ruby/1.8/benchmark.rb:308:in `realtime'
+/Users/alexwang/.rvm/gems/ruby-1.8.7-p299/gems/activesupport-2.3.8/lib/active_support/core_ext/benchmark.rb:17:in `ms'
+/Users/alexwang/.rvm/gems/ruby-1.8.7-p299/gems/actionpack-2.3.8/lib/action_controller/benchmarking.rb:51:in `render'
+/Users/alexwang/.rvm/gems/ruby-1.8.7-p299/gems/actionpack-2.3.8/lib/action_controller/base.rb:1326:in `default_render'
+/Users/alexwang/.rvm/gems/ruby-1.8.7-p299/gems/actionpack-2.3.8/lib/action_controller/base.rb:1332:in `perform_action_without_filters'
+/Users/alexwang/.rvm/gems/ruby-1.8.7-p299/gems/actionpack-2.3.8/lib/action_controller/filters.rb:617:in `call_filters'
+/Users/alexwang/.rvm/gems/ruby-1.8.7-p299/gems/actionpack-2.3.8/lib/action_controller/filters.rb:610:in `perform_action_without_benchmark'
+/Users/alexwang/.rvm/gems/ruby-1.8.7-p299/gems/actionpack-2.3.8/lib/action_controller/benchmarking.rb:68:in `perform_action_without_rescue'
+/Users/alexwang/.rvm/gems/ruby-1.8.7-p299/gems/activesupport-2.3.8/lib/active_support/core_ext/benchmark.rb:17:in `ms'
+/Users/alexwang/.rvm/rubies/ruby-1.8.7-p299/lib/ruby/1.8/benchmark.rb:308:in `realtime'
+/Users/alexwang/.rvm/gems/ruby-1.8.7-p299/gems/activesupport-2.3.8/lib/active_support/core_ext/benchmark.rb:17:in `ms'
+/Users/alexwang/.rvm/gems/ruby-1.8.7-p299/gems/actionpack-2.3.8/lib/action_controller/benchmarking.rb:68:in `perform_action_without_rescue'
+/Users/alexwang/.rvm/gems/ruby-1.8.7-p299/gems/actionpack-2.3.8/lib/action_controller/rescue.rb:160:in `perform_action_without_flash'
+/Users/alexwang/.rvm/gems/ruby-1.8.7-p299/gems/actionpack-2.3.8/lib/action_controller/flash.rb:151:in `perform_action'
+/Users/alexwang/.rvm/gems/ruby-1.8.7-p299/gems/actionpack-2.3.8/lib/action_controller/base.rb:532:in `send'
+/Users/alexwang/.rvm/gems/ruby-1.8.7-p299/gems/actionpack-2.3.8/lib/action_controller/base.rb:532:in `process_without_filters'
+/Users/alexwang/.rvm/gems/ruby-1.8.7-p299/gems/actionpack-2.3.8/lib/action_controller/filters.rb:606:in `process'
+/Users/alexwang/.rvm/gems/ruby-1.8.7-p299/gems/actionpack-2.3.8/lib/action_controller/base.rb:391:in `process'
+/Users/alexwang/.rvm/gems/ruby-1.8.7-p299/gems/actionpack-2.3.8/lib/action_controller/base.rb:386:in `call'
+/Users/alexwang/.rvm/gems/ruby-1.8.7-p299/gems/actionpack-2.3.8/lib/action_controller/routing/route_set.rb:438:in `call'
+/Users/alexwang/.rvm/gems/ruby-1.8.7-p299/gems/actionpack-2.3.8/lib/action_controller/dispatcher.rb:87:in `dispatch'
+/Users/alexwang/.rvm/gems/ruby-1.8.7-p299/gems/actionpack-2.3.8/lib/action_controller/dispatcher.rb:121:in `_call'
+/Users/alexwang/.rvm/gems/ruby-1.8.7-p299/gems/actionpack-2.3.8/lib/action_controller/dispatcher.rb:130:in `build_middleware_stack'
+/Users/alexwang/.rvm/gems/ruby-1.8.7-p299/gems/activerecord-2.3.8/lib/active_record/query_cache.rb:29:in `call'
+/Users/alexwang/.rvm/gems/ruby-1.8.7-p299/gems/activerecord-2.3.8/lib/active_record/query_cache.rb:29:in `call'
+/Users/alexwang/.rvm/gems/ruby-1.8.7-p299/gems/activerecord-2.3.8/lib/active_record/connection_adapters/abstract/query_cache.rb:34:in `cache'
+/Users/alexwang/.rvm/gems/ruby-1.8.7-p299/gems/activerecord-2.3.8/lib/active_record/query_cache.rb:9:in `cache'
+/Users/alexwang/.rvm/gems/ruby-1.8.7-p299/gems/activerecord-2.3.8/lib/active_record/query_cache.rb:28:in `call'
+/Users/alexwang/.rvm/gems/ruby-1.8.7-p299/gems/activerecord-2.3.8/lib/active_record/connection_adapters/abstract/connection_pool.rb:361:in `call'
+/Users/alexwang/.rvm/gems/ruby-1.8.7-p299/gems/actionpack-2.3.8/lib/action_controller/string_coercion.rb:25:in `call'
+/Users/alexwang/.rvm/gems/ruby-1.8.7-p299/gems/rack-1.1.0/lib/rack/head.rb:9:in `call'
+/Users/alexwang/.rvm/gems/ruby-1.8.7-p299/gems/rack-1.1.0/lib/rack/methodoverride.rb:24:in `call'
+/Users/alexwang/.rvm/gems/ruby-1.8.7-p299/gems/actionpack-2.3.8/lib/action_controller/params_parser.rb:15:in `call'
+/Users/alexwang/.rvm/gems/ruby-1.8.7-p299/gems/actionpack-2.3.8/lib/action_controller/session/cookie_store.rb:99:in `call'
+/Users/alexwang/.rvm/gems/ruby-1.8.7-p299/gems/actionpack-2.3.8/lib/action_controller/failsafe.rb:26:in `call'
+/Users/alexwang/.rvm/gems/ruby-1.8.7-p299/gems/rack-1.1.0/lib/rack/lock.rb:11:in `call'
+/Users/alexwang/.rvm/gems/ruby-1.8.7-p299/gems/rack-1.1.0/lib/rack/lock.rb:11:in `synchronize'
+/Users/alexwang/.rvm/gems/ruby-1.8.7-p299/gems/rack-1.1.0/lib/rack/lock.rb:11:in `call'
+/Users/alexwang/.rvm/gems/ruby-1.8.7-p299/gems/actionpack-2.3.8/lib/action_controller/dispatcher.rb:114:in `call'
+/Users/alexwang/.rvm/gems/ruby-1.8.7-p299/gems/actionpack-2.3.8/lib/action_controller/reloader.rb:34:in `run'
+/Users/alexwang/.rvm/gems/ruby-1.8.7-p299/gems/actionpack-2.3.8/lib/action_controller/dispatcher.rb:108:in `call'
+/Users/alexwang/.rvm/gems/ruby-1.8.7-p299/gems/rails-2.3.8/lib/rails/rack/static.rb:31:in `call'
+/Users/alexwang/.rvm/gems/ruby-1.8.7-p299/gems/rack-1.1.0/lib/rack/urlmap.rb:47:in `call'
+/Users/alexwang/.rvm/gems/ruby-1.8.7-p299/gems/rack-1.1.0/lib/rack/urlmap.rb:41:in `each'
+/Users/alexwang/.rvm/gems/ruby-1.8.7-p299/gems/rack-1.1.0/lib/rack/urlmap.rb:41:in `call'
+/Users/alexwang/.rvm/gems/ruby-1.8.7-p299/gems/rails-2.3.8/lib/rails/rack/log_tailer.rb:17:in `call'
+/Users/alexwang/.rvm/gems/ruby-1.8.7-p299/gems/rack-1.1.0/lib/rack/content_length.rb:13:in `call'
+/Users/alexwang/.rvm/gems/ruby-1.8.7-p299/gems/rack-1.1.0/lib/rack/handler/webrick.rb:48:in `service'
+/Users/alexwang/.rvm/rubies/ruby-1.8.7-p299/lib/ruby/1.8/webrick/httpserver.rb:104:in `service'
+/Users/alexwang/.rvm/rubies/ruby-1.8.7-p299/lib/ruby/1.8/webrick/httpserver.rb:65:in `run'
+/Users/alexwang/.rvm/rubies/ruby-1.8.7-p299/lib/ruby/1.8/webrick/server.rb:173:in `start_thread'
+/Users/alexwang/.rvm/rubies/ruby-1.8.7-p299/lib/ruby/1.8/webrick/server.rb:162:in `start'
+/Users/alexwang/.rvm/rubies/ruby-1.8.7-p299/lib/ruby/1.8/webrick/server.rb:162:in `start_thread'
+/Users/alexwang/.rvm/rubies/ruby-1.8.7-p299/lib/ruby/1.8/webrick/server.rb:95:in `start'
+/Users/alexwang/.rvm/rubies/ruby-1.8.7-p299/lib/ruby/1.8/webrick/server.rb:92:in `each'
+/Users/alexwang/.rvm/rubies/ruby-1.8.7-p299/lib/ruby/1.8/webrick/server.rb:92:in `start'
+/Users/alexwang/.rvm/rubies/ruby-1.8.7-p299/lib/ruby/1.8/webrick/server.rb:23:in `start'
+/Users/alexwang/.rvm/rubies/ruby-1.8.7-p299/lib/ruby/1.8/webrick/server.rb:82:in `start'
+/Users/alexwang/.rvm/gems/ruby-1.8.7-p299/gems/rack-1.1.0/lib/rack/handler/webrick.rb:14:in `run'
+/Users/alexwang/.rvm/gems/ruby-1.8.7-p299/gems/rails-2.3.8/lib/commands/server.rb:111
+/Users/alexwang/.rvm/rubies/ruby-1.8.7-p299/lib/ruby/site_ruby/1.8/rubygems/custom_require.rb:31:in `gem_original_require'
+/Users/alexwang/.rvm/rubies/ruby-1.8.7-p299/lib/ruby/site_ruby/1.8/rubygems/custom_require.rb:31:in `require'
+script/server:3
+
+ActionView::TemplateError (compile error
+/Users/alexwang/biteofthefuture/app/views/layouts/application.html.erb:255: syntax error, unexpected kENSURE, expecting kEND
+/Users/alexwang/biteofthefuture/app/views/layouts/application.html.erb:257: syntax error, unexpected $end) on line #255 of app/views/layouts/application.html.erb:
+252: </body>
+253: </html>
+
+    app/views/layouts/application.html.erb:257:in `compile!'
+    /Users/alexwang/.rvm/rubies/ruby-1.8.7-p299/lib/ruby/1.8/webrick/httpserver.rb:104:in `service'
+    /Users/alexwang/.rvm/rubies/ruby-1.8.7-p299/lib/ruby/1.8/webrick/httpserver.rb:65:in `run'
+    /Users/alexwang/.rvm/rubies/ruby-1.8.7-p299/lib/ruby/1.8/webrick/server.rb:173:in `start_thread'
+    /Users/alexwang/.rvm/rubies/ruby-1.8.7-p299/lib/ruby/1.8/webrick/server.rb:162:in `start'
+    /Users/alexwang/.rvm/rubies/ruby-1.8.7-p299/lib/ruby/1.8/webrick/server.rb:162:in `start_thread'
+    /Users/alexwang/.rvm/rubies/ruby-1.8.7-p299/lib/ruby/1.8/webrick/server.rb:95:in `start'
+    /Users/alexwang/.rvm/rubies/ruby-1.8.7-p299/lib/ruby/1.8/webrick/server.rb:92:in `each'
+    /Users/alexwang/.rvm/rubies/ruby-1.8.7-p299/lib/ruby/1.8/webrick/server.rb:92:in `start'
+    /Users/alexwang/.rvm/rubies/ruby-1.8.7-p299/lib/ruby/1.8/webrick/server.rb:23:in `start'
+    /Users/alexwang/.rvm/rubies/ruby-1.8.7-p299/lib/ruby/1.8/webrick/server.rb:82:in `start'
+
+Rendered rescues/_trace (29.1ms)
+Rendered rescues/_request_and_response (1.0ms)
+Rendering rescues/layout (internal_server_error)
+
+
+Processing UserSessionsController#new (for 127.0.0.1 at 2010-08-12 17:15:49) [GET]
+Rendering template within layouts/application
+Rendering user_sessions/new
+  [4;36;1mUser Load (0.4ms)[0m   [0;1mSELECT * FROM "users" WHERE ("users"."id" = '3') LIMIT 1[0m
+
+ActionView::TemplateError (edit_user_url failed to generate from {:controller=>"users", :action=>"edit"} - you may have ambiguous routes, or you may need to supply additional parameters for this route.  content_url has the following required parameters: ["users", :id, "edit"] - are they all satisfied?) on line #32 of app/views/layouts/application.html.erb:
+29: 			<li><a href="index.html">Support</a></li>
+30: 			<li><a href="index.html">About</a></li>			
+31: 			<% if current_user %> 
+32: 				<li><%= link_to "Edit Profile", edit_user_path %></li>
+33: 				<li><%= link_to "Logout", logout_path%>
+34: 			<% else %>
+35: 				<li><%= link_to "Register", new_user_path %>
+
+    (eval):17:in `edit_user_path'
+    app/views/layouts/application.html.erb:32
+    /Users/alexwang/.rvm/rubies/ruby-1.8.7-p299/lib/ruby/1.8/webrick/httpserver.rb:104:in `service'
+    /Users/alexwang/.rvm/rubies/ruby-1.8.7-p299/lib/ruby/1.8/webrick/httpserver.rb:65:in `run'
+    /Users/alexwang/.rvm/rubies/ruby-1.8.7-p299/lib/ruby/1.8/webrick/server.rb:173:in `start_thread'
+    /Users/alexwang/.rvm/rubies/ruby-1.8.7-p299/lib/ruby/1.8/webrick/server.rb:162:in `start'
+    /Users/alexwang/.rvm/rubies/ruby-1.8.7-p299/lib/ruby/1.8/webrick/server.rb:162:in `start_thread'
+    /Users/alexwang/.rvm/rubies/ruby-1.8.7-p299/lib/ruby/1.8/webrick/server.rb:95:in `start'
+    /Users/alexwang/.rvm/rubies/ruby-1.8.7-p299/lib/ruby/1.8/webrick/server.rb:92:in `each'
+    /Users/alexwang/.rvm/rubies/ruby-1.8.7-p299/lib/ruby/1.8/webrick/server.rb:92:in `start'
+    /Users/alexwang/.rvm/rubies/ruby-1.8.7-p299/lib/ruby/1.8/webrick/server.rb:23:in `start'
+    /Users/alexwang/.rvm/rubies/ruby-1.8.7-p299/lib/ruby/1.8/webrick/server.rb:82:in `start'
+
+Rendered rescues/_trace (33.0ms)
+Rendered rescues/_request_and_response (0.3ms)
+Rendering rescues/layout (internal_server_error)
+
+
+Processing UserSessionsController#new (for 127.0.0.1 at 2010-08-12 17:16:52) [GET]
+Rendering template within layouts/application
+Rendering user_sessions/new
+  [4;35;1mUser Load (0.5ms)[0m   [0mSELECT * FROM "users" WHERE ("users"."id" = '3') LIMIT 1[0m
+
+ActionView::TemplateError (edit_user_url failed to generate from {:controller=>"users", :action=>"edit"} - you may have ambiguous routes, or you may need to supply additional parameters for this route.  content_url has the following required parameters: ["users", :id, "edit"] - are they all satisfied?) on line #32 of app/views/layouts/application.html.erb:
+29: 			<li><a href="index.html">Support</a></li>
+30: 			<li><a href="index.html">About</a></li>			
+31: 			<% if current_user %> 
+32: 				<li><%= link_to "Edit Profile", edit_user_path %></li>
+33: 				<li><%= link_to "Logout", logout_path%>
+34: 			<% else %>
+35: 				<li><%= link_to "Register", new_user_path %>
+
+    (eval):17:in `edit_user_path'
+    app/views/layouts/application.html.erb:32
+    /Users/alexwang/.rvm/rubies/ruby-1.8.7-p299/lib/ruby/1.8/webrick/httpserver.rb:104:in `service'
+    /Users/alexwang/.rvm/rubies/ruby-1.8.7-p299/lib/ruby/1.8/webrick/httpserver.rb:65:in `run'
+    /Users/alexwang/.rvm/rubies/ruby-1.8.7-p299/lib/ruby/1.8/webrick/server.rb:173:in `start_thread'
+    /Users/alexwang/.rvm/rubies/ruby-1.8.7-p299/lib/ruby/1.8/webrick/server.rb:162:in `start'
+    /Users/alexwang/.rvm/rubies/ruby-1.8.7-p299/lib/ruby/1.8/webrick/server.rb:162:in `start_thread'
+    /Users/alexwang/.rvm/rubies/ruby-1.8.7-p299/lib/ruby/1.8/webrick/server.rb:95:in `start'
+    /Users/alexwang/.rvm/rubies/ruby-1.8.7-p299/lib/ruby/1.8/webrick/server.rb:92:in `each'
+    /Users/alexwang/.rvm/rubies/ruby-1.8.7-p299/lib/ruby/1.8/webrick/server.rb:92:in `start'
+    /Users/alexwang/.rvm/rubies/ruby-1.8.7-p299/lib/ruby/1.8/webrick/server.rb:23:in `start'
+    /Users/alexwang/.rvm/rubies/ruby-1.8.7-p299/lib/ruby/1.8/webrick/server.rb:82:in `start'
+
+Rendered rescues/_trace (32.1ms)
+Rendered rescues/_request_and_response (0.2ms)
+Rendering rescues/layout (internal_server_error)
+
+
+Processing UserSessionsController#new (for 127.0.0.1 at 2010-08-12 17:17:02) [GET]
+Rendering template within layouts/application
+Rendering user_sessions/new
+  [4;36;1mUser Load (0.4ms)[0m   [0;1mSELECT * FROM "users" WHERE ("users"."id" = '3') LIMIT 1[0m
+Completed in 25ms (View: 12, DB: 0) | 200 OK [http://localhost/login]
+
+
+Processing UserSessionsController#destroy (for 127.0.0.1 at 2010-08-12 17:17:12) [GET]
+  [4;35;1mUser Load (0.4ms)[0m   [0mSELECT * FROM "users" WHERE ("users"."id" = '3') LIMIT 1[0m
+Redirected to http://localhost:3000/posts
+Completed in 16ms (DB: 0) | 302 Found [http://localhost/logout]
+
+
+Processing PostsController#index (for 127.0.0.1 at 2010-08-12 17:17:12) [GET]
+Redirected to http://localhost:3000/login
+
+
+Processing UserSessionsController#new (for 127.0.0.1 at 2010-08-12 17:17:12) [GET]
+Rendering template within layouts/application
+Rendering user_sessions/new
+Completed in 17ms (View: 4, DB: 0) | 200 OK [http://localhost/login]
+
+
+Processing UserSessionsController#index (for 127.0.0.1 at 2010-08-12 17:17:14) [GET]
+
+ActionController::UnknownAction (No action responded to index. Actions: create, destroy, and new):
+  /Users/alexwang/.rvm/rubies/ruby-1.8.7-p299/lib/ruby/1.8/webrick/httpserver.rb:104:in `service'
+  /Users/alexwang/.rvm/rubies/ruby-1.8.7-p299/lib/ruby/1.8/webrick/httpserver.rb:65:in `run'
+  /Users/alexwang/.rvm/rubies/ruby-1.8.7-p299/lib/ruby/1.8/webrick/server.rb:173:in `start_thread'
+  /Users/alexwang/.rvm/rubies/ruby-1.8.7-p299/lib/ruby/1.8/webrick/server.rb:162:in `start'
+  /Users/alexwang/.rvm/rubies/ruby-1.8.7-p299/lib/ruby/1.8/webrick/server.rb:162:in `start_thread'
+  /Users/alexwang/.rvm/rubies/ruby-1.8.7-p299/lib/ruby/1.8/webrick/server.rb:95:in `start'
+  /Users/alexwang/.rvm/rubies/ruby-1.8.7-p299/lib/ruby/1.8/webrick/server.rb:92:in `each'
+  /Users/alexwang/.rvm/rubies/ruby-1.8.7-p299/lib/ruby/1.8/webrick/server.rb:92:in `start'
+  /Users/alexwang/.rvm/rubies/ruby-1.8.7-p299/lib/ruby/1.8/webrick/server.rb:23:in `start'
+  /Users/alexwang/.rvm/rubies/ruby-1.8.7-p299/lib/ruby/1.8/webrick/server.rb:82:in `start'
+
+Rendering rescues/layout (not_found)
+
+
+Processing UserSessionsController#index (for 127.0.0.1 at 2010-08-12 17:19:10) [GET]
+
+ActionController::UnknownAction (No action responded to index. Actions: create, destroy, and new):
+  /Users/alexwang/.rvm/rubies/ruby-1.8.7-p299/lib/ruby/1.8/webrick/httpserver.rb:104:in `service'
+  /Users/alexwang/.rvm/rubies/ruby-1.8.7-p299/lib/ruby/1.8/webrick/httpserver.rb:65:in `run'
+  /Users/alexwang/.rvm/rubies/ruby-1.8.7-p299/lib/ruby/1.8/webrick/server.rb:173:in `start_thread'
+  /Users/alexwang/.rvm/rubies/ruby-1.8.7-p299/lib/ruby/1.8/webrick/server.rb:162:in `start'
+  /Users/alexwang/.rvm/rubies/ruby-1.8.7-p299/lib/ruby/1.8/webrick/server.rb:162:in `start_thread'
+  /Users/alexwang/.rvm/rubies/ruby-1.8.7-p299/lib/ruby/1.8/webrick/server.rb:95:in `start'
+  /Users/alexwang/.rvm/rubies/ruby-1.8.7-p299/lib/ruby/1.8/webrick/server.rb:92:in `each'
+  /Users/alexwang/.rvm/rubies/ruby-1.8.7-p299/lib/ruby/1.8/webrick/server.rb:92:in `start'
+  /Users/alexwang/.rvm/rubies/ruby-1.8.7-p299/lib/ruby/1.8/webrick/server.rb:23:in `start'
+  /Users/alexwang/.rvm/rubies/ruby-1.8.7-p299/lib/ruby/1.8/webrick/server.rb:82:in `start'
+
+Rendering rescues/layout (not_found)
+
+
+Processing UserSessionsController#index (for 127.0.0.1 at 2010-08-12 17:19:32) [GET]
+
+ActionController::UnknownAction (No action responded to index. Actions: create, destroy, and new):
+  /Users/alexwang/.rvm/rubies/ruby-1.8.7-p299/lib/ruby/1.8/webrick/httpserver.rb:104:in `service'
+  /Users/alexwang/.rvm/rubies/ruby-1.8.7-p299/lib/ruby/1.8/webrick/httpserver.rb:65:in `run'
+  /Users/alexwang/.rvm/rubies/ruby-1.8.7-p299/lib/ruby/1.8/webrick/server.rb:173:in `start_thread'
+  /Users/alexwang/.rvm/rubies/ruby-1.8.7-p299/lib/ruby/1.8/webrick/server.rb:162:in `start'
+  /Users/alexwang/.rvm/rubies/ruby-1.8.7-p299/lib/ruby/1.8/webrick/server.rb:162:in `start_thread'
+  /Users/alexwang/.rvm/rubies/ruby-1.8.7-p299/lib/ruby/1.8/webrick/server.rb:95:in `start'
+  /Users/alexwang/.rvm/rubies/ruby-1.8.7-p299/lib/ruby/1.8/webrick/server.rb:92:in `each'
+  /Users/alexwang/.rvm/rubies/ruby-1.8.7-p299/lib/ruby/1.8/webrick/server.rb:92:in `start'
+  /Users/alexwang/.rvm/rubies/ruby-1.8.7-p299/lib/ruby/1.8/webrick/server.rb:23:in `start'
+  /Users/alexwang/.rvm/rubies/ruby-1.8.7-p299/lib/ruby/1.8/webrick/server.rb:82:in `start'
+
+Rendering rescues/layout (not_found)
+
+
+Processing UserSessionsController#index (for 127.0.0.1 at 2010-08-12 17:19:34) [GET]
+
+ActionController::UnknownAction (No action responded to index. Actions: create, destroy, and new):
+  /Users/alexwang/.rvm/rubies/ruby-1.8.7-p299/lib/ruby/1.8/webrick/httpserver.rb:104:in `service'
+  /Users/alexwang/.rvm/rubies/ruby-1.8.7-p299/lib/ruby/1.8/webrick/httpserver.rb:65:in `run'
+  /Users/alexwang/.rvm/rubies/ruby-1.8.7-p299/lib/ruby/1.8/webrick/server.rb:173:in `start_thread'
+  /Users/alexwang/.rvm/rubies/ruby-1.8.7-p299/lib/ruby/1.8/webrick/server.rb:162:in `start'
+  /Users/alexwang/.rvm/rubies/ruby-1.8.7-p299/lib/ruby/1.8/webrick/server.rb:162:in `start_thread'
+  /Users/alexwang/.rvm/rubies/ruby-1.8.7-p299/lib/ruby/1.8/webrick/server.rb:95:in `start'
+  /Users/alexwang/.rvm/rubies/ruby-1.8.7-p299/lib/ruby/1.8/webrick/server.rb:92:in `each'
+  /Users/alexwang/.rvm/rubies/ruby-1.8.7-p299/lib/ruby/1.8/webrick/server.rb:92:in `start'
+  /Users/alexwang/.rvm/rubies/ruby-1.8.7-p299/lib/ruby/1.8/webrick/server.rb:23:in `start'
+  /Users/alexwang/.rvm/rubies/ruby-1.8.7-p299/lib/ruby/1.8/webrick/server.rb:82:in `start'
+
+Rendering rescues/layout (not_found)
+
+
+Processing UsersController#new (for 127.0.0.1 at 2010-08-12 17:20:04) [GET]
+Rendering template within layouts/application
+Rendering users/new
+Rendered users/_form (5.3ms)
+Completed in 91ms (View: 81, DB: 0) | 200 OK [http://localhost/users/new]
+
+
+Processing UsersController#images to jpg (for 127.0.0.1 at 2010-08-12 17:20:05) [GET]
+  Parameters: {"id"=>"firefox-gray"}
+
+ActionController::UnknownAction (No action responded to images. Actions: create, edit, new, and update):
+  /Users/alexwang/.rvm/rubies/ruby-1.8.7-p299/lib/ruby/1.8/webrick/httpserver.rb:104:in `service'
+  /Users/alexwang/.rvm/rubies/ruby-1.8.7-p299/lib/ruby/1.8/webrick/httpserver.rb:65:in `run'
+  /Users/alexwang/.rvm/rubies/ruby-1.8.7-p299/lib/ruby/1.8/webrick/server.rb:173:in `start_thread'
+  /Users/alexwang/.rvm/rubies/ruby-1.8.7-p299/lib/ruby/1.8/webrick/server.rb:162:in `start'
+  /Users/alexwang/.rvm/rubies/ruby-1.8.7-p299/lib/ruby/1.8/webrick/server.rb:162:in `start_thread'
+  /Users/alexwang/.rvm/rubies/ruby-1.8.7-p299/lib/ruby/1.8/webrick/server.rb:95:in `start'
+  /Users/alexwang/.rvm/rubies/ruby-1.8.7-p299/lib/ruby/1.8/webrick/server.rb:92:in `each'
+  /Users/alexwang/.rvm/rubies/ruby-1.8.7-p299/lib/ruby/1.8/webrick/server.rb:92:in `start'
+  /Users/alexwang/.rvm/rubies/ruby-1.8.7-p299/lib/ruby/1.8/webrick/server.rb:23:in `start'
+  /Users/alexwang/.rvm/rubies/ruby-1.8.7-p299/lib/ruby/1.8/webrick/server.rb:82:in `start'
+
+Rendering rescues/layout (not_found)
+
+
+Processing UserSessionsController#new (for 127.0.0.1 at 2010-08-12 17:20:07) [GET]
+Rendering template within layouts/application
+Rendering user_sessions/new
+Completed in 17ms (View: 4, DB: 0) | 200 OK [http://localhost/user_sessions/new]
+
+
+Processing UserSessionsController#images to jpg (for 127.0.0.1 at 2010-08-12 17:20:07) [GET]
+  Parameters: {"id"=>"firefox-gray"}
+
+ActionController::UnknownAction (No action responded to images. Actions: create, destroy, and new):
+  /Users/alexwang/.rvm/rubies/ruby-1.8.7-p299/lib/ruby/1.8/webrick/httpserver.rb:104:in `service'
+  /Users/alexwang/.rvm/rubies/ruby-1.8.7-p299/lib/ruby/1.8/webrick/httpserver.rb:65:in `run'
+  /Users/alexwang/.rvm/rubies/ruby-1.8.7-p299/lib/ruby/1.8/webrick/server.rb:173:in `start_thread'
+  /Users/alexwang/.rvm/rubies/ruby-1.8.7-p299/lib/ruby/1.8/webrick/server.rb:162:in `start'
+  /Users/alexwang/.rvm/rubies/ruby-1.8.7-p299/lib/ruby/1.8/webrick/server.rb:162:in `start_thread'
+  /Users/alexwang/.rvm/rubies/ruby-1.8.7-p299/lib/ruby/1.8/webrick/server.rb:95:in `start'
+  /Users/alexwang/.rvm/rubies/ruby-1.8.7-p299/lib/ruby/1.8/webrick/server.rb:92:in `each'
+  /Users/alexwang/.rvm/rubies/ruby-1.8.7-p299/lib/ruby/1.8/webrick/server.rb:92:in `start'
+  /Users/alexwang/.rvm/rubies/ruby-1.8.7-p299/lib/ruby/1.8/webrick/server.rb:23:in `start'
+  /Users/alexwang/.rvm/rubies/ruby-1.8.7-p299/lib/ruby/1.8/webrick/server.rb:82:in `start'
+
+Rendering rescues/layout (not_found)
+
+
+Processing UserSessionsController#new (for 127.0.0.1 at 2010-08-12 17:20:08) [GET]
+Rendering template within layouts/application
+Rendering user_sessions/new
+Completed in 79ms (View: 5, DB: 0) | 200 OK [http://localhost/user_sessions/new]
+
+
+Processing UserSessionsController#images to jpg (for 127.0.0.1 at 2010-08-12 17:20:08) [GET]
+  Parameters: {"id"=>"firefox-gray"}
+
+ActionController::UnknownAction (No action responded to images. Actions: create, destroy, and new):
+  /Users/alexwang/.rvm/rubies/ruby-1.8.7-p299/lib/ruby/1.8/webrick/httpserver.rb:104:in `service'
+  /Users/alexwang/.rvm/rubies/ruby-1.8.7-p299/lib/ruby/1.8/webrick/httpserver.rb:65:in `run'
+  /Users/alexwang/.rvm/rubies/ruby-1.8.7-p299/lib/ruby/1.8/webrick/server.rb:173:in `start_thread'
+  /Users/alexwang/.rvm/rubies/ruby-1.8.7-p299/lib/ruby/1.8/webrick/server.rb:162:in `start'
+  /Users/alexwang/.rvm/rubies/ruby-1.8.7-p299/lib/ruby/1.8/webrick/server.rb:162:in `start_thread'
+  /Users/alexwang/.rvm/rubies/ruby-1.8.7-p299/lib/ruby/1.8/webrick/server.rb:95:in `start'
+  /Users/alexwang/.rvm/rubies/ruby-1.8.7-p299/lib/ruby/1.8/webrick/server.rb:92:in `each'
+  /Users/alexwang/.rvm/rubies/ruby-1.8.7-p299/lib/ruby/1.8/webrick/server.rb:92:in `start'
+  /Users/alexwang/.rvm/rubies/ruby-1.8.7-p299/lib/ruby/1.8/webrick/server.rb:23:in `start'
+  /Users/alexwang/.rvm/rubies/ruby-1.8.7-p299/lib/ruby/1.8/webrick/server.rb:82:in `start'
+
+Rendering rescues/layout (not_found)
+
+
+Processing UsersController#new (for 127.0.0.1 at 2010-08-12 17:20:10) [GET]
+Rendering template within layouts/application
+Rendering users/new
+Rendered users/_form (4.5ms)
+Completed in 19ms (View: 8, DB: 0) | 200 OK [http://localhost/users/new]
+
+
+Processing UsersController#images to jpg (for 127.0.0.1 at 2010-08-12 17:20:10) [GET]
+  Parameters: {"id"=>"firefox-gray"}
+
+ActionController::UnknownAction (No action responded to images. Actions: create, edit, new, and update):
+  /Users/alexwang/.rvm/rubies/ruby-1.8.7-p299/lib/ruby/1.8/webrick/httpserver.rb:104:in `service'
+  /Users/alexwang/.rvm/rubies/ruby-1.8.7-p299/lib/ruby/1.8/webrick/httpserver.rb:65:in `run'
+  /Users/alexwang/.rvm/rubies/ruby-1.8.7-p299/lib/ruby/1.8/webrick/server.rb:173:in `start_thread'
+  /Users/alexwang/.rvm/rubies/ruby-1.8.7-p299/lib/ruby/1.8/webrick/server.rb:162:in `start'
+  /Users/alexwang/.rvm/rubies/ruby-1.8.7-p299/lib/ruby/1.8/webrick/server.rb:162:in `start_thread'
+  /Users/alexwang/.rvm/rubies/ruby-1.8.7-p299/lib/ruby/1.8/webrick/server.rb:95:in `start'
+  /Users/alexwang/.rvm/rubies/ruby-1.8.7-p299/lib/ruby/1.8/webrick/server.rb:92:in `each'
+  /Users/alexwang/.rvm/rubies/ruby-1.8.7-p299/lib/ruby/1.8/webrick/server.rb:92:in `start'
+  /Users/alexwang/.rvm/rubies/ruby-1.8.7-p299/lib/ruby/1.8/webrick/server.rb:23:in `start'
+  /Users/alexwang/.rvm/rubies/ruby-1.8.7-p299/lib/ruby/1.8/webrick/server.rb:82:in `start'
+
+Rendering rescues/layout (not_found)
+
+
+Processing UserSessionsController#new (for 127.0.0.1 at 2010-08-12 17:20:12) [GET]
+Rendering template within layouts/application
+Rendering user_sessions/new
+Completed in 18ms (View: 4, DB: 0) | 200 OK [http://localhost/user_sessions/new]
+
+
+Processing UserSessionsController#images to jpg (for 127.0.0.1 at 2010-08-12 17:20:12) [GET]
+  Parameters: {"id"=>"firefox-gray"}
+
+ActionController::UnknownAction (No action responded to images. Actions: create, destroy, and new):
+  /Users/alexwang/.rvm/rubies/ruby-1.8.7-p299/lib/ruby/1.8/webrick/httpserver.rb:104:in `service'
+  /Users/alexwang/.rvm/rubies/ruby-1.8.7-p299/lib/ruby/1.8/webrick/httpserver.rb:65:in `run'
+  /Users/alexwang/.rvm/rubies/ruby-1.8.7-p299/lib/ruby/1.8/webrick/server.rb:173:in `start_thread'
+  /Users/alexwang/.rvm/rubies/ruby-1.8.7-p299/lib/ruby/1.8/webrick/server.rb:162:in `start'
+  /Users/alexwang/.rvm/rubies/ruby-1.8.7-p299/lib/ruby/1.8/webrick/server.rb:162:in `start_thread'
+  /Users/alexwang/.rvm/rubies/ruby-1.8.7-p299/lib/ruby/1.8/webrick/server.rb:95:in `start'
+  /Users/alexwang/.rvm/rubies/ruby-1.8.7-p299/lib/ruby/1.8/webrick/server.rb:92:in `each'
+  /Users/alexwang/.rvm/rubies/ruby-1.8.7-p299/lib/ruby/1.8/webrick/server.rb:92:in `start'
+  /Users/alexwang/.rvm/rubies/ruby-1.8.7-p299/lib/ruby/1.8/webrick/server.rb:23:in `start'
+  /Users/alexwang/.rvm/rubies/ruby-1.8.7-p299/lib/ruby/1.8/webrick/server.rb:82:in `start'
+
+Rendering rescues/layout (not_found)
+
+
+Processing UserSessionsController#new (for 127.0.0.1 at 2010-08-12 17:20:23) [GET]
+Rendering template within layouts/application
+Rendering user_sessions/new
+Completed in 21ms (View: 9, DB: 0) | 200 OK [http://localhost/user_sessions/new]
+
+
+Processing UserSessionsController#images to jpg (for 127.0.0.1 at 2010-08-12 17:20:23) [GET]
+  Parameters: {"id"=>"firefox-gray"}
+
+ActionController::UnknownAction (No action responded to images. Actions: create, destroy, and new):
+  /Users/alexwang/.rvm/rubies/ruby-1.8.7-p299/lib/ruby/1.8/webrick/httpserver.rb:104:in `service'
+  /Users/alexwang/.rvm/rubies/ruby-1.8.7-p299/lib/ruby/1.8/webrick/httpserver.rb:65:in `run'
+  /Users/alexwang/.rvm/rubies/ruby-1.8.7-p299/lib/ruby/1.8/webrick/server.rb:173:in `start_thread'
+  /Users/alexwang/.rvm/rubies/ruby-1.8.7-p299/lib/ruby/1.8/webrick/server.rb:162:in `start'
+  /Users/alexwang/.rvm/rubies/ruby-1.8.7-p299/lib/ruby/1.8/webrick/server.rb:162:in `start_thread'
+  /Users/alexwang/.rvm/rubies/ruby-1.8.7-p299/lib/ruby/1.8/webrick/server.rb:95:in `start'
+  /Users/alexwang/.rvm/rubies/ruby-1.8.7-p299/lib/ruby/1.8/webrick/server.rb:92:in `each'
+  /Users/alexwang/.rvm/rubies/ruby-1.8.7-p299/lib/ruby/1.8/webrick/server.rb:92:in `start'
+  /Users/alexwang/.rvm/rubies/ruby-1.8.7-p299/lib/ruby/1.8/webrick/server.rb:23:in `start'
+  /Users/alexwang/.rvm/rubies/ruby-1.8.7-p299/lib/ruby/1.8/webrick/server.rb:82:in `start'
+
+Rendering rescues/layout (not_found)
+
+
+Processing UserSessionsController#new (for 127.0.0.1 at 2010-08-12 17:20:25) [GET]
+Rendering template within layouts/application
+Rendering user_sessions/new
+Completed in 17ms (View: 4, DB: 0) | 200 OK [http://localhost/login]
+
+
+Processing UserSessionsController#create (for 127.0.0.1 at 2010-08-12 17:20:30) [POST]
+  Parameters: {"commit"=>"Save changes", "user_session"=>{"username"=>"admin", "password"=>"adminrocks"}, "authenticity_token"=>"zSohxNuZF5488FNhliwP7csiUG6fpD2iZxbB8mk7Vp0="}
+  [4;36;1mUser Load (0.4ms)[0m   [0;1mSELECT * FROM "users" WHERE (LOWER("users".username) = 'admin') LIMIT 1[0m
+  [4;35;1mUser Update (0.3ms)[0m   [0mUPDATE "users" SET "login_count" = 21, "updated_at" = '2010-08-12 22:20:30', "last_login_at" = '2010-08-12 22:03:02', "current_login_at" = '2010-08-12 22:20:30' WHERE "id" = 3[0m
+Redirected to http://localhost:3000/posts
+Completed in 82ms (DB: 1) | 302 Found [http://localhost/user_sessions]
+
+
+Processing PostsController#index (for 127.0.0.1 at 2010-08-12 17:20:30) [GET]
+  [4;36;1mUser Load (0.4ms)[0m   [0;1mSELECT * FROM "users" WHERE ("users"."id" = '3') LIMIT 1[0m
+  [4;35;1mPost Load (1.0ms)[0m   [0mSELECT * FROM "posts" [0m
+Rendering template within layouts/application
+Rendering posts/index
+  [4;36;1mTag Load (0.2ms)[0m   [0;1mSELECT "tags".* FROM "tags" INNER JOIN "taggings" ON "tags".id = "taggings".tag_id WHERE (("taggings".taggable_id = 1) AND ("taggings".taggable_type = 'Post')) [0m
+  [4;35;1mTag Load (0.1ms)[0m   [0mSELECT "tags".* FROM "tags" INNER JOIN "taggings" ON "tags".id = "taggings".tag_id WHERE (("taggings".taggable_id = 2) AND ("taggings".taggable_type = 'Post')) [0m
+  [4;36;1mTag Load (0.1ms)[0m   [0;1mSELECT "tags".* FROM "tags" INNER JOIN "taggings" ON "tags".id = "taggings".tag_id WHERE (("taggings".taggable_id = 3) AND ("taggings".taggable_type = 'Post')) [0m
+  [4;35;1mTag Load (0.1ms)[0m   [0mSELECT "tags".* FROM "tags" INNER JOIN "taggings" ON "tags".id = "taggings".tag_id WHERE (("taggings".taggable_id = 4) AND ("taggings".taggable_type = 'Post')) [0m
+  [4;36;1mTag Load (0.1ms)[0m   [0;1mSELECT "tags".* FROM "tags" INNER JOIN "taggings" ON "tags".id = "taggings".tag_id WHERE (("taggings".taggable_id = 8) AND ("taggings".taggable_type = 'Post')) [0m
+  [4;35;1mTag Load (0.1ms)[0m   [0mSELECT "tags".* FROM "tags" INNER JOIN "taggings" ON "tags".id = "taggings".tag_id WHERE (("taggings".taggable_id = 9) AND ("taggings".taggable_type = 'Post')) [0m
+  [4;36;1mTag Load (0.1ms)[0m   [0;1mSELECT "tags".* FROM "tags" INNER JOIN "taggings" ON "tags".id = "taggings".tag_id WHERE (("taggings".taggable_id = 10) AND ("taggings".taggable_type = 'Post')) [0m
+  [4;35;1mTag Load (0.1ms)[0m   [0mSELECT "tags".* FROM "tags" INNER JOIN "taggings" ON "tags".id = "taggings".tag_id WHERE (("taggings".taggable_id = 11) AND ("taggings".taggable_type = 'Post')) [0m
+  [4;36;1mTag Load (0.1ms)[0m   [0;1mSELECT "tags".* FROM "tags" INNER JOIN "taggings" ON "tags".id = "taggings".tag_id WHERE (("taggings".taggable_id = 12) AND ("taggings".taggable_type = 'Post')) [0m
+  [4;35;1mTag Load (0.1ms)[0m   [0mSELECT "tags".* FROM "tags" INNER JOIN "taggings" ON "tags".id = "taggings".tag_id WHERE (("taggings".taggable_id = 13) AND ("taggings".taggable_type = 'Post')) [0m
+  [4;36;1mTag Load (0.1ms)[0m   [0;1mSELECT "tags".* FROM "tags" INNER JOIN "taggings" ON "tags".id = "taggings".tag_id WHERE (("taggings".taggable_id = 15) AND ("taggings".taggable_type = 'Post')) [0m
+  [4;35;1mTag Load (0.1ms)[0m   [0mSELECT "tags".* FROM "tags" INNER JOIN "taggings" ON "tags".id = "taggings".tag_id WHERE (("taggings".taggable_id = 16) AND ("taggings".taggable_type = 'Post')) [0m
+  [4;36;1mTag Load (0.2ms)[0m   [0;1mSELECT "tags".* FROM "tags" INNER JOIN "taggings" ON "tags".id = "taggings".tag_id WHERE (("taggings".taggable_id = 17) AND ("taggings".taggable_type = 'Post')) [0m
+  [4;35;1mTag Load (0.1ms)[0m   [0mSELECT "tags".* FROM "tags" INNER JOIN "taggings" ON "tags".id = "taggings".tag_id WHERE (("taggings".taggable_id = 18) AND ("taggings".taggable_type = 'Post')) [0m
+  [4;36;1mTag Load (0.1ms)[0m   [0;1mSELECT "tags".* FROM "tags" INNER JOIN "taggings" ON "tags".id = "taggings".tag_id WHERE (("taggings".taggable_id = 19) AND ("taggings".taggable_type = 'Post')) [0m
+  [4;35;1mTag Load (0.1ms)[0m   [0mSELECT "tags".* FROM "tags" INNER JOIN "taggings" ON "tags".id = "taggings".tag_id WHERE (("taggings".taggable_id = 20) AND ("taggings".taggable_type = 'Post')) [0m
+Completed in 58ms (View: 34, DB: 3) | 200 OK [http://localhost/posts]
+
+
+Processing UsersController#edit (for 127.0.0.1 at 2010-08-12 17:20:32) [GET]
+  Parameters: {"id"=>"3"}
+  [4;36;1mUser Load (0.4ms)[0m   [0;1mSELECT * FROM "users" WHERE ("users"."id" = '3') LIMIT 1[0m
+Rendering template within layouts/application
+Rendering users/edit
+Rendered users/_form (3.3ms)
+Completed in 25ms (View: 7, DB: 0) | 200 OK [http://localhost/users/3/edit]
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2010-08-12 17:20:32) [GET]
+
+ActionController::RoutingError (No route matches "/users/3/images/firefox-gray.jpg" with {:method=>:get}):
+  /Users/alexwang/.rvm/rubies/ruby-1.8.7-p299/lib/ruby/1.8/webrick/httpserver.rb:104:in `service'
+  /Users/alexwang/.rvm/rubies/ruby-1.8.7-p299/lib/ruby/1.8/webrick/httpserver.rb:65:in `run'
+  /Users/alexwang/.rvm/rubies/ruby-1.8.7-p299/lib/ruby/1.8/webrick/server.rb:173:in `start_thread'
+  /Users/alexwang/.rvm/rubies/ruby-1.8.7-p299/lib/ruby/1.8/webrick/server.rb:162:in `start'
+  /Users/alexwang/.rvm/rubies/ruby-1.8.7-p299/lib/ruby/1.8/webrick/server.rb:162:in `start_thread'
+  /Users/alexwang/.rvm/rubies/ruby-1.8.7-p299/lib/ruby/1.8/webrick/server.rb:95:in `start'
+  /Users/alexwang/.rvm/rubies/ruby-1.8.7-p299/lib/ruby/1.8/webrick/server.rb:92:in `each'
+  /Users/alexwang/.rvm/rubies/ruby-1.8.7-p299/lib/ruby/1.8/webrick/server.rb:92:in `start'
+  /Users/alexwang/.rvm/rubies/ruby-1.8.7-p299/lib/ruby/1.8/webrick/server.rb:23:in `start'
+  /Users/alexwang/.rvm/rubies/ruby-1.8.7-p299/lib/ruby/1.8/webrick/server.rb:82:in `start'
+
+Rendering rescues/layout (not_found)
+
+
+Processing UserSessionsController#destroy (for 127.0.0.1 at 2010-08-12 17:20:33) [GET]
+  [4;35;1mUser Load (0.4ms)[0m   [0mSELECT * FROM "users" WHERE ("users"."id" = '3') LIMIT 1[0m
+Redirected to http://localhost:3000/posts
+Completed in 16ms (DB: 0) | 302 Found [http://localhost/logout]
+
+
+Processing PostsController#index (for 127.0.0.1 at 2010-08-12 17:20:33) [GET]
+Redirected to http://localhost:3000/login
+
+
+Processing UserSessionsController#new (for 127.0.0.1 at 2010-08-12 17:20:33) [GET]
+Rendering template within layouts/application
+Rendering user_sessions/new
+Completed in 16ms (View: 4, DB: 0) | 200 OK [http://localhost/login]
+
+
+Processing UserSessionsController#new (for 127.0.0.1 at 2010-08-12 17:32:23) [GET]
+Rendering template within layouts/application
+Rendering user_sessions/new
+Completed in 83ms (View: 9, DB: 0) | 200 OK [http://localhost/login]
+
+
+Processing UserSessionsController#new (for 127.0.0.1 at 2010-08-12 17:32:24) [GET]
+Rendering template within layouts/application
+Rendering user_sessions/new
+Completed in 16ms (View: 4, DB: 0) | 200 OK [http://localhost/login]
+
+
+Processing UserSessionsController#new (for 127.0.0.1 at 2010-08-12 17:34:22) [GET]
+Rendering template within layouts/application
+Rendering user_sessions/new
+Completed in 22ms (View: 9, DB: 0) | 200 OK [http://localhost/login]
+
+
+Processing UserSessionsController#create (for 127.0.0.1 at 2010-08-12 17:34:27) [POST]
+  Parameters: {"commit"=>"Save changes", "user_session"=>{"username"=>"admin", "password"=>"adminrocks"}, "authenticity_token"=>"zSohxNuZF5488FNhliwP7csiUG6fpD2iZxbB8mk7Vp0="}
+  [4;36;1mUser Load (0.4ms)[0m   [0;1mSELECT * FROM "users" WHERE (LOWER("users".username) = 'admin') LIMIT 1[0m
+  [4;35;1mUser Update (0.3ms)[0m   [0mUPDATE "users" SET "login_count" = 22, "updated_at" = '2010-08-12 22:34:27', "last_login_at" = '2010-08-12 22:20:30', "current_login_at" = '2010-08-12 22:34:27' WHERE "id" = 3[0m
+Redirected to http://localhost:3000/posts
+Completed in 23ms (DB: 1) | 302 Found [http://localhost/user_sessions]
+
+
+Processing PostsController#index (for 127.0.0.1 at 2010-08-12 17:34:27) [GET]
+  [4;36;1mUser Load (0.4ms)[0m   [0;1mSELECT * FROM "users" WHERE ("users"."id" = '3') LIMIT 1[0m
+  [4;35;1mPost Load (1.1ms)[0m   [0mSELECT * FROM "posts" [0m
+Rendering template within layouts/application
+Rendering posts/index
+  [4;36;1mTag Load (0.2ms)[0m   [0;1mSELECT "tags".* FROM "tags" INNER JOIN "taggings" ON "tags".id = "taggings".tag_id WHERE (("taggings".taggable_id = 1) AND ("taggings".taggable_type = 'Post')) [0m
+  [4;35;1mTag Load (0.1ms)[0m   [0mSELECT "tags".* FROM "tags" INNER JOIN "taggings" ON "tags".id = "taggings".tag_id WHERE (("taggings".taggable_id = 2) AND ("taggings".taggable_type = 'Post')) [0m
+  [4;36;1mTag Load (0.1ms)[0m   [0;1mSELECT "tags".* FROM "tags" INNER JOIN "taggings" ON "tags".id = "taggings".tag_id WHERE (("taggings".taggable_id = 3) AND ("taggings".taggable_type = 'Post')) [0m
+  [4;35;1mTag Load (0.1ms)[0m   [0mSELECT "tags".* FROM "tags" INNER JOIN "taggings" ON "tags".id = "taggings".tag_id WHERE (("taggings".taggable_id = 4) AND ("taggings".taggable_type = 'Post')) [0m
+  [4;36;1mTag Load (0.1ms)[0m   [0;1mSELECT "tags".* FROM "tags" INNER JOIN "taggings" ON "tags".id = "taggings".tag_id WHERE (("taggings".taggable_id = 8) AND ("taggings".taggable_type = 'Post')) [0m
+  [4;35;1mTag Load (0.1ms)[0m   [0mSELECT "tags".* FROM "tags" INNER JOIN "taggings" ON "tags".id = "taggings".tag_id WHERE (("taggings".taggable_id = 9) AND ("taggings".taggable_type = 'Post')) [0m
+  [4;36;1mTag Load (0.1ms)[0m   [0;1mSELECT "tags".* FROM "tags" INNER JOIN "taggings" ON "tags".id = "taggings".tag_id WHERE (("taggings".taggable_id = 10) AND ("taggings".taggable_type = 'Post')) [0m
+  [4;35;1mTag Load (0.1ms)[0m   [0mSELECT "tags".* FROM "tags" INNER JOIN "taggings" ON "tags".id = "taggings".tag_id WHERE (("taggings".taggable_id = 11) AND ("taggings".taggable_type = 'Post')) [0m
+  [4;36;1mTag Load (0.1ms)[0m   [0;1mSELECT "tags".* FROM "tags" INNER JOIN "taggings" ON "tags".id = "taggings".tag_id WHERE (("taggings".taggable_id = 12) AND ("taggings".taggable_type = 'Post')) [0m
+  [4;35;1mTag Load (0.1ms)[0m   [0mSELECT "tags".* FROM "tags" INNER JOIN "taggings" ON "tags".id = "taggings".tag_id WHERE (("taggings".taggable_id = 13) AND ("taggings".taggable_type = 'Post')) [0m
+  [4;36;1mTag Load (0.2ms)[0m   [0;1mSELECT "tags".* FROM "tags" INNER JOIN "taggings" ON "tags".id = "taggings".tag_id WHERE (("taggings".taggable_id = 15) AND ("taggings".taggable_type = 'Post')) [0m
+  [4;35;1mTag Load (0.2ms)[0m   [0mSELECT "tags".* FROM "tags" INNER JOIN "taggings" ON "tags".id = "taggings".tag_id WHERE (("taggings".taggable_id = 16) AND ("taggings".taggable_type = 'Post')) [0m
+  [4;36;1mTag Load (0.2ms)[0m   [0;1mSELECT "tags".* FROM "tags" INNER JOIN "taggings" ON "tags".id = "taggings".tag_id WHERE (("taggings".taggable_id = 17) AND ("taggings".taggable_type = 'Post')) [0m
+  [4;35;1mTag Load (0.1ms)[0m   [0mSELECT "tags".* FROM "tags" INNER JOIN "taggings" ON "tags".id = "taggings".tag_id WHERE (("taggings".taggable_id = 18) AND ("taggings".taggable_type = 'Post')) [0m
+  [4;36;1mTag Load (0.1ms)[0m   [0;1mSELECT "tags".* FROM "tags" INNER JOIN "taggings" ON "tags".id = "taggings".tag_id WHERE (("taggings".taggable_id = 19) AND ("taggings".taggable_type = 'Post')) [0m
+  [4;35;1mTag Load (0.2ms)[0m   [0mSELECT "tags".* FROM "tags" INNER JOIN "taggings" ON "tags".id = "taggings".tag_id WHERE (("taggings".taggable_id = 20) AND ("taggings".taggable_type = 'Post')) [0m
+Completed in 119ms (View: 35, DB: 4) | 200 OK [http://localhost/posts]
+
+
+Processing UsersController#edit (for 127.0.0.1 at 2010-08-12 17:34:32) [GET]
+  Parameters: {"id"=>"3"}
+  [4;36;1mUser Load (0.4ms)[0m   [0;1mSELECT * FROM "users" WHERE ("users"."id" = '3') LIMIT 1[0m
+Rendering template within layouts/application
+Rendering users/edit
+Rendered users/_form (3.3ms)
+Completed in 81ms (View: 5, DB: 0) | 200 OK [http://localhost/users/3/edit]
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2010-08-12 17:34:32) [GET]
+
+ActionController::RoutingError (No route matches "/users/3/images/firefox-gray.jpg" with {:method=>:get}):
+  /Users/alexwang/.rvm/rubies/ruby-1.8.7-p299/lib/ruby/1.8/webrick/httpserver.rb:104:in `service'
+  /Users/alexwang/.rvm/rubies/ruby-1.8.7-p299/lib/ruby/1.8/webrick/httpserver.rb:65:in `run'
+  /Users/alexwang/.rvm/rubies/ruby-1.8.7-p299/lib/ruby/1.8/webrick/server.rb:173:in `start_thread'
+  /Users/alexwang/.rvm/rubies/ruby-1.8.7-p299/lib/ruby/1.8/webrick/server.rb:162:in `start'
+  /Users/alexwang/.rvm/rubies/ruby-1.8.7-p299/lib/ruby/1.8/webrick/server.rb:162:in `start_thread'
+  /Users/alexwang/.rvm/rubies/ruby-1.8.7-p299/lib/ruby/1.8/webrick/server.rb:95:in `start'
+  /Users/alexwang/.rvm/rubies/ruby-1.8.7-p299/lib/ruby/1.8/webrick/server.rb:92:in `each'
+  /Users/alexwang/.rvm/rubies/ruby-1.8.7-p299/lib/ruby/1.8/webrick/server.rb:92:in `start'
+  /Users/alexwang/.rvm/rubies/ruby-1.8.7-p299/lib/ruby/1.8/webrick/server.rb:23:in `start'
+  /Users/alexwang/.rvm/rubies/ruby-1.8.7-p299/lib/ruby/1.8/webrick/server.rb:82:in `start'
+
+Rendering rescues/layout (not_found)
+
+
+Processing UserSessionsController#destroy (for 127.0.0.1 at 2010-08-12 17:34:33) [GET]
+  [4;35;1mUser Load (0.4ms)[0m   [0mSELECT * FROM "users" WHERE ("users"."id" = '3') LIMIT 1[0m
+Redirected to http://localhost:3000/posts
+Completed in 17ms (DB: 0) | 302 Found [http://localhost/logout]
+
+
+Processing PostsController#index (for 127.0.0.1 at 2010-08-12 17:34:33) [GET]
+Redirected to http://localhost:3000/login
+
+
+Processing UserSessionsController#new (for 127.0.0.1 at 2010-08-12 17:34:33) [GET]
+Rendering template within layouts/application
+Rendering user_sessions/new
+Completed in 17ms (View: 4, DB: 0) | 200 OK [http://localhost/login]
+
+
+Processing UsersController#new (for 127.0.0.1 at 2010-08-12 17:34:34) [GET]
+Rendering template within layouts/application
+Rendering users/new
+Rendered users/_form (4.4ms)
+Completed in 19ms (View: 8, DB: 0) | 200 OK [http://localhost/users/new]
+
+
+Processing UsersController#images to jpg (for 127.0.0.1 at 2010-08-12 17:34:34) [GET]
+  Parameters: {"id"=>"firefox-gray"}
+
+ActionController::UnknownAction (No action responded to images. Actions: create, edit, new, and update):
+  /Users/alexwang/.rvm/rubies/ruby-1.8.7-p299/lib/ruby/1.8/webrick/httpserver.rb:104:in `service'
+  /Users/alexwang/.rvm/rubies/ruby-1.8.7-p299/lib/ruby/1.8/webrick/httpserver.rb:65:in `run'
+  /Users/alexwang/.rvm/rubies/ruby-1.8.7-p299/lib/ruby/1.8/webrick/server.rb:173:in `start_thread'
+  /Users/alexwang/.rvm/rubies/ruby-1.8.7-p299/lib/ruby/1.8/webrick/server.rb:162:in `start'
+  /Users/alexwang/.rvm/rubies/ruby-1.8.7-p299/lib/ruby/1.8/webrick/server.rb:162:in `start_thread'
+  /Users/alexwang/.rvm/rubies/ruby-1.8.7-p299/lib/ruby/1.8/webrick/server.rb:95:in `start'
+  /Users/alexwang/.rvm/rubies/ruby-1.8.7-p299/lib/ruby/1.8/webrick/server.rb:92:in `each'
+  /Users/alexwang/.rvm/rubies/ruby-1.8.7-p299/lib/ruby/1.8/webrick/server.rb:92:in `start'
+  /Users/alexwang/.rvm/rubies/ruby-1.8.7-p299/lib/ruby/1.8/webrick/server.rb:23:in `start'
+  /Users/alexwang/.rvm/rubies/ruby-1.8.7-p299/lib/ruby/1.8/webrick/server.rb:82:in `start'
+
+Rendering rescues/layout (not_found)
+
+
+Processing UsersController#new (for 127.0.0.1 at 2010-08-12 17:34:35) [GET]
+Rendering template within layouts/application
+Rendering users/new
+Rendered users/_form (4.9ms)
+Completed in 23ms (View: 10, DB: 0) | 200 OK [http://localhost/users/new]
+
+
+Processing UsersController#images to jpg (for 127.0.0.1 at 2010-08-12 17:34:35) [GET]
+  Parameters: {"id"=>"firefox-gray"}
+
+ActionController::UnknownAction (No action responded to images. Actions: create, edit, new, and update):
+  /Users/alexwang/.rvm/rubies/ruby-1.8.7-p299/lib/ruby/1.8/webrick/httpserver.rb:104:in `service'
+  /Users/alexwang/.rvm/rubies/ruby-1.8.7-p299/lib/ruby/1.8/webrick/httpserver.rb:65:in `run'
+  /Users/alexwang/.rvm/rubies/ruby-1.8.7-p299/lib/ruby/1.8/webrick/server.rb:173:in `start_thread'
+  /Users/alexwang/.rvm/rubies/ruby-1.8.7-p299/lib/ruby/1.8/webrick/server.rb:162:in `start'
+  /Users/alexwang/.rvm/rubies/ruby-1.8.7-p299/lib/ruby/1.8/webrick/server.rb:162:in `start_thread'
+  /Users/alexwang/.rvm/rubies/ruby-1.8.7-p299/lib/ruby/1.8/webrick/server.rb:95:in `start'
+  /Users/alexwang/.rvm/rubies/ruby-1.8.7-p299/lib/ruby/1.8/webrick/server.rb:92:in `each'
+  /Users/alexwang/.rvm/rubies/ruby-1.8.7-p299/lib/ruby/1.8/webrick/server.rb:92:in `start'
+  /Users/alexwang/.rvm/rubies/ruby-1.8.7-p299/lib/ruby/1.8/webrick/server.rb:23:in `start'
+  /Users/alexwang/.rvm/rubies/ruby-1.8.7-p299/lib/ruby/1.8/webrick/server.rb:82:in `start'
+
+Rendering rescues/layout (not_found)
+
+
+Processing UserSessionsController#new (for 127.0.0.1 at 2010-08-12 17:34:36) [GET]
+Rendering template within layouts/application
+Rendering user_sessions/new
+Completed in 16ms (View: 4, DB: 0) | 200 OK [http://localhost/login]
+
+
+Processing UserSessionsController#create (for 127.0.0.1 at 2010-08-12 17:34:42) [POST]
+  Parameters: {"commit"=>"Save changes", "user_session"=>{"username"=>"admin", "password"=>"adminrocks"}, "authenticity_token"=>"zSohxNuZF5488FNhliwP7csiUG6fpD2iZxbB8mk7Vp0="}
+  [4;36;1mUser Load (0.4ms)[0m   [0;1mSELECT * FROM "users" WHERE (LOWER("users".username) = 'admin') LIMIT 1[0m
+  [4;35;1mUser Update (0.3ms)[0m   [0mUPDATE "users" SET "login_count" = 23, "updated_at" = '2010-08-12 22:34:42', "last_login_at" = '2010-08-12 22:34:27', "current_login_at" = '2010-08-12 22:34:42' WHERE "id" = 3[0m
+Redirected to http://localhost:3000/posts
+Completed in 52ms (DB: 1) | 302 Found [http://localhost/user_sessions]
+
+
+Processing PostsController#index (for 127.0.0.1 at 2010-08-12 17:34:42) [GET]
+  [4;36;1mUser Load (0.4ms)[0m   [0;1mSELECT * FROM "users" WHERE ("users"."id" = '3') LIMIT 1[0m
+  [4;35;1mPost Load (1.0ms)[0m   [0mSELECT * FROM "posts" [0m
+Rendering template within layouts/application
+Rendering posts/index
+  [4;36;1mTag Load (0.2ms)[0m   [0;1mSELECT "tags".* FROM "tags" INNER JOIN "taggings" ON "tags".id = "taggings".tag_id WHERE (("taggings".taggable_id = 1) AND ("taggings".taggable_type = 'Post')) [0m
+  [4;35;1mTag Load (0.1ms)[0m   [0mSELECT "tags".* FROM "tags" INNER JOIN "taggings" ON "tags".id = "taggings".tag_id WHERE (("taggings".taggable_id = 2) AND ("taggings".taggable_type = 'Post')) [0m
+  [4;36;1mTag Load (0.1ms)[0m   [0;1mSELECT "tags".* FROM "tags" INNER JOIN "taggings" ON "tags".id = "taggings".tag_id WHERE (("taggings".taggable_id = 3) AND ("taggings".taggable_type = 'Post')) [0m
+  [4;35;1mTag Load (0.2ms)[0m   [0mSELECT "tags".* FROM "tags" INNER JOIN "taggings" ON "tags".id = "taggings".tag_id WHERE (("taggings".taggable_id = 4) AND ("taggings".taggable_type = 'Post')) [0m
+  [4;36;1mTag Load (0.1ms)[0m   [0;1mSELECT "tags".* FROM "tags" INNER JOIN "taggings" ON "tags".id = "taggings".tag_id WHERE (("taggings".taggable_id = 8) AND ("taggings".taggable_type = 'Post')) [0m
+  [4;35;1mTag Load (0.1ms)[0m   [0mSELECT "tags".* FROM "tags" INNER JOIN "taggings" ON "tags".id = "taggings".tag_id WHERE (("taggings".taggable_id = 9) AND ("taggings".taggable_type = 'Post')) [0m
+  [4;36;1mTag Load (0.1ms)[0m   [0;1mSELECT "tags".* FROM "tags" INNER JOIN "taggings" ON "tags".id = "taggings".tag_id WHERE (("taggings".taggable_id = 10) AND ("taggings".taggable_type = 'Post')) [0m
+  [4;35;1mTag Load (0.1ms)[0m   [0mSELECT "tags".* FROM "tags" INNER JOIN "taggings" ON "tags".id = "taggings".tag_id WHERE (("taggings".taggable_id = 11) AND ("taggings".taggable_type = 'Post')) [0m
+  [4;36;1mTag Load (0.1ms)[0m   [0;1mSELECT "tags".* FROM "tags" INNER JOIN "taggings" ON "tags".id = "taggings".tag_id WHERE (("taggings".taggable_id = 12) AND ("taggings".taggable_type = 'Post')) [0m
+  [4;35;1mTag Load (0.1ms)[0m   [0mSELECT "tags".* FROM "tags" INNER JOIN "taggings" ON "tags".id = "taggings".tag_id WHERE (("taggings".taggable_id = 13) AND ("taggings".taggable_type = 'Post')) [0m
+  [4;36;1mTag Load (0.1ms)[0m   [0;1mSELECT "tags".* FROM "tags" INNER JOIN "taggings" ON "tags".id = "taggings".tag_id WHERE (("taggings".taggable_id = 15) AND ("taggings".taggable_type = 'Post')) [0m
+  [4;35;1mTag Load (0.1ms)[0m   [0mSELECT "tags".* FROM "tags" INNER JOIN "taggings" ON "tags".id = "taggings".tag_id WHERE (("taggings".taggable_id = 16) AND ("taggings".taggable_type = 'Post')) [0m
+  [4;36;1mTag Load (0.2ms)[0m   [0;1mSELECT "tags".* FROM "tags" INNER JOIN "taggings" ON "tags".id = "taggings".tag_id WHERE (("taggings".taggable_id = 17) AND ("taggings".taggable_type = 'Post')) [0m
+  [4;35;1mTag Load (0.1ms)[0m   [0mSELECT "tags".* FROM "tags" INNER JOIN "taggings" ON "tags".id = "taggings".tag_id WHERE (("taggings".taggable_id = 18) AND ("taggings".taggable_type = 'Post')) [0m
+  [4;36;1mTag Load (0.1ms)[0m   [0;1mSELECT "tags".* FROM "tags" INNER JOIN "taggings" ON "tags".id = "taggings".tag_id WHERE (("taggings".taggable_id = 19) AND ("taggings".taggable_type = 'Post')) [0m
+  [4;35;1mTag Load (0.1ms)[0m   [0mSELECT "tags".* FROM "tags" INNER JOIN "taggings" ON "tags".id = "taggings".tag_id WHERE (("taggings".taggable_id = 20) AND ("taggings".taggable_type = 'Post')) [0m
+Completed in 119ms (View: 94, DB: 3) | 200 OK [http://localhost/posts]
+
+
+Processing UserSessionsController#new (for 127.0.0.1 at 2010-08-12 17:35:40) [GET]
+  Parameters: {"search_query"=>"hi", "search"=>"Search"}
+Rendering template within layouts/application
+Rendering user_sessions/new
+  [4;36;1mUser Load (0.4ms)[0m   [0;1mSELECT * FROM "users" WHERE ("users"."id" = '3') LIMIT 1[0m
+Completed in 21ms (View: 7, DB: 0) | 200 OK [http://localhost/login?search_query=hi&search=Search]
+
+
+Processing UserSessionsController#create (for 127.0.0.1 at 2010-08-12 17:38:53) [POST]
+  Parameters: {"commit"=>"Save changes", "user_session"=>{"username"=>"admin", "password"=>"adminrocks"}, "authenticity_token"=>"zSohxNuZF5488FNhliwP7csiUG6fpD2iZxbB8mk7Vp0="}
+  [4;35;1mUser Load (0.4ms)[0m   [0mSELECT * FROM "users" WHERE (LOWER("users".username) = 'admin') LIMIT 1[0m
+  [4;36;1mUser Update (0.3ms)[0m   [0;1mUPDATE "users" SET "login_count" = 24, "updated_at" = '2010-08-12 22:38:53', "last_login_at" = '2010-08-12 22:34:42', "current_login_at" = '2010-08-12 22:38:53' WHERE "id" = 3[0m
+Redirected to http://localhost:3000/posts
+Completed in 363ms (DB: 1) | 302 Found [http://localhost/user_sessions]
+
+
+Processing PostsController#index (for 127.0.0.1 at 2010-08-12 17:38:54) [GET]
+  [4;35;1mUser Load (0.4ms)[0m   [0mSELECT * FROM "users" WHERE ("users"."id" = '3') LIMIT 1[0m
+  [4;36;1mPost Load (1.1ms)[0m   [0;1mSELECT * FROM "posts" [0m
+Rendering template within layouts/application
+Rendering posts/index
+  [4;35;1mTag Load (0.2ms)[0m   [0mSELECT "tags".* FROM "tags" INNER JOIN "taggings" ON "tags".id = "taggings".tag_id WHERE (("taggings".taggable_id = 1) AND ("taggings".taggable_type = 'Post')) [0m
+  [4;36;1mTag Load (0.1ms)[0m   [0;1mSELECT "tags".* FROM "tags" INNER JOIN "taggings" ON "tags".id = "taggings".tag_id WHERE (("taggings".taggable_id = 2) AND ("taggings".taggable_type = 'Post')) [0m
+  [4;35;1mTag Load (0.2ms)[0m   [0mSELECT "tags".* FROM "tags" INNER JOIN "taggings" ON "tags".id = "taggings".tag_id WHERE (("taggings".taggable_id = 3) AND ("taggings".taggable_type = 'Post')) [0m
+  [4;36;1mTag Load (0.2ms)[0m   [0;1mSELECT "tags".* FROM "tags" INNER JOIN "taggings" ON "tags".id = "taggings".tag_id WHERE (("taggings".taggable_id = 4) AND ("taggings".taggable_type = 'Post')) [0m
+  [4;35;1mTag Load (0.1ms)[0m   [0mSELECT "tags".* FROM "tags" INNER JOIN "taggings" ON "tags".id = "taggings".tag_id WHERE (("taggings".taggable_id = 8) AND ("taggings".taggable_type = 'Post')) [0m
+  [4;36;1mTag Load (0.1ms)[0m   [0;1mSELECT "tags".* FROM "tags" INNER JOIN "taggings" ON "tags".id = "taggings".tag_id WHERE (("taggings".taggable_id = 9) AND ("taggings".taggable_type = 'Post')) [0m
+  [4;35;1mTag Load (0.1ms)[0m   [0mSELECT "tags".* FROM "tags" INNER JOIN "taggings" ON "tags".id = "taggings".tag_id WHERE (("taggings".taggable_id = 10) AND ("taggings".taggable_type = 'Post')) [0m
+  [4;36;1mTag Load (0.1ms)[0m   [0;1mSELECT "tags".* FROM "tags" INNER JOIN "taggings" ON "tags".id = "taggings".tag_id WHERE (("taggings".taggable_id = 11) AND ("taggings".taggable_type = 'Post')) [0m
+  [4;35;1mTag Load (0.1ms)[0m   [0mSELECT "tags".* FROM "tags" INNER JOIN "taggings" ON "tags".id = "taggings".tag_id WHERE (("taggings".taggable_id = 12) AND ("taggings".taggable_type = 'Post')) [0m
+  [4;36;1mTag Load (0.1ms)[0m   [0;1mSELECT "tags".* FROM "tags" INNER JOIN "taggings" ON "tags".id = "taggings".tag_id WHERE (("taggings".taggable_id = 13) AND ("taggings".taggable_type = 'Post')) [0m
+  [4;35;1mTag Load (0.1ms)[0m   [0mSELECT "tags".* FROM "tags" INNER JOIN "taggings" ON "tags".id = "taggings".tag_id WHERE (("taggings".taggable_id = 15) AND ("taggings".taggable_type = 'Post')) [0m
+  [4;36;1mTag Load (0.1ms)[0m   [0;1mSELECT "tags".* FROM "tags" INNER JOIN "taggings" ON "tags".id = "taggings".tag_id WHERE (("taggings".taggable_id = 16) AND ("taggings".taggable_type = 'Post')) [0m
+  [4;35;1mTag Load (0.2ms)[0m   [0mSELECT "tags".* FROM "tags" INNER JOIN "taggings" ON "tags".id = "taggings".tag_id WHERE (("taggings".taggable_id = 17) AND ("taggings".taggable_type = 'Post')) [0m
+  [4;36;1mTag Load (0.1ms)[0m   [0;1mSELECT "tags".* FROM "tags" INNER JOIN "taggings" ON "tags".id = "taggings".tag_id WHERE (("taggings".taggable_id = 18) AND ("taggings".taggable_type = 'Post')) [0m
+  [4;35;1mTag Load (0.1ms)[0m   [0mSELECT "tags".* FROM "tags" INNER JOIN "taggings" ON "tags".id = "taggings".tag_id WHERE (("taggings".taggable_id = 19) AND ("taggings".taggable_type = 'Post')) [0m
+  [4;36;1mTag Load (0.2ms)[0m   [0;1mSELECT "tags".* FROM "tags" INNER JOIN "taggings" ON "tags".id = "taggings".tag_id WHERE (("taggings".taggable_id = 20) AND ("taggings".taggable_type = 'Post')) [0m
+Completed in 64ms (View: 37, DB: 4) | 200 OK [http://localhost/posts]
+
+
+Processing UserSessionsController#destroy (for 127.0.0.1 at 2010-08-12 18:19:20) [GET]
+  [4;35;1mUser Load (0.5ms)[0m   [0mSELECT * FROM "users" WHERE ("users"."id" = '3') LIMIT 1[0m
+Redirected to http://localhost:3000/posts
+Completed in 21ms (DB: 1) | 302 Found [http://localhost/logout]
+
+
+Processing PostsController#index (for 127.0.0.1 at 2010-08-12 18:19:20) [GET]
+Redirected to http://localhost:3000/login
+
+
+Processing UserSessionsController#new (for 127.0.0.1 at 2010-08-12 18:19:20) [GET]
+Rendering template within layouts/application
+Rendering user_sessions/new
+Completed in 77ms (View: 64, DB: 0) | 200 OK [http://localhost/login]
+
+
+Processing PostsController#index (for 127.0.0.1 at 2010-08-12 23:31:56) [GET]
+Redirected to http://localhost:3000/login
+
+
+Processing UserSessionsController#new (for 127.0.0.1 at 2010-08-12 23:31:56) [GET]
+Rendering template within layouts/application
+Rendering user_sessions/new
+Completed in 31ms (View: 14, DB: 0) | 200 OK [http://localhost/login]
+
+
+Processing ForumController#index (for 127.0.0.1 at 2010-08-12 23:33:33) [GET]
+  [4;36;1mPost Load (0.7ms)[0m   [0;1mSELECT * FROM "posts" ORDER BY created_at DESC LIMIT 2 OFFSET 0[0m
+  [4;35;1mSQL (0.2ms)[0m   [0mSELECT count(*) AS count_all FROM "posts" [0m
+Rendering template within layouts/application
+Rendering forum/index
+Completed in 86ms (View: 78, DB: 1) | 200 OK [http://localhost/forum]
+
+
+Processing ForumController#index (for 127.0.0.1 at 2010-08-12 23:33:38) [GET]
+  Parameters: {"page"=>"2"}
+  [4;36;1mPost Load (0.7ms)[0m   [0;1mSELECT * FROM "posts" ORDER BY created_at DESC LIMIT 2 OFFSET 2[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSELECT count(*) AS count_all FROM "posts" [0m
+Rendering template within layouts/application
+Rendering forum/index
+Completed in 33ms (View: 26, DB: 1) | 200 OK [http://localhost/forum?page=2]
+
+
+Processing ForumController#index (for 127.0.0.1 at 2010-08-12 23:33:40) [GET]
+  Parameters: {"page"=>"3"}
+  [4;36;1mPost Load (0.8ms)[0m   [0;1mSELECT * FROM "posts" ORDER BY created_at DESC LIMIT 2 OFFSET 4[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSELECT count(*) AS count_all FROM "posts" [0m
+Rendering template within layouts/application
+Rendering forum/index
+Completed in 95ms (View: 87, DB: 1) | 200 OK [http://localhost/forum?page=3]
+
+
+Processing ForumController#index (for 127.0.0.1 at 2010-08-12 23:33:42) [GET]
+  Parameters: {"page"=>"4"}
+  [4;36;1mPost Load (0.7ms)[0m   [0;1mSELECT * FROM "posts" ORDER BY created_at DESC LIMIT 2 OFFSET 6[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSELECT count(*) AS count_all FROM "posts" [0m
+Rendering template within layouts/application
+Rendering forum/index
+Completed in 28ms (View: 21, DB: 1) | 200 OK [http://localhost/forum?page=4]
+
+
+Processing ForumController#index (for 127.0.0.1 at 2010-08-12 23:33:44) [GET]
+  Parameters: {"page"=>"5"}
+  [4;36;1mPost Load (0.7ms)[0m   [0;1mSELECT * FROM "posts" ORDER BY created_at DESC LIMIT 2 OFFSET 8[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSELECT count(*) AS count_all FROM "posts" [0m
+Rendering template within layouts/application
+Rendering forum/index
+Completed in 93ms (View: 85, DB: 1) | 200 OK [http://localhost/forum?page=5]
+
+
+Processing ForumController#index (for 127.0.0.1 at 2010-08-12 23:33:46) [GET]
+  Parameters: {"page"=>"6"}
+  [4;36;1mPost Load (0.7ms)[0m   [0;1mSELECT * FROM "posts" ORDER BY created_at DESC LIMIT 2 OFFSET 10[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSELECT count(*) AS count_all FROM "posts" [0m
+Rendering template within layouts/application
+Rendering forum/index
+Completed in 30ms (View: 22, DB: 1) | 200 OK [http://localhost/forum?page=6]
+
+
+Processing ForumController#index (for 127.0.0.1 at 2010-08-12 23:33:47) [GET]
+  Parameters: {"page"=>"7"}
+  [4;36;1mPost Load (0.8ms)[0m   [0;1mSELECT * FROM "posts" ORDER BY created_at DESC LIMIT 2 OFFSET 12[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSELECT count(*) AS count_all FROM "posts" [0m
+Rendering template within layouts/application
+Rendering forum/index
+Completed in 93ms (View: 22, DB: 1) | 200 OK [http://localhost/forum?page=7]
+
+
+Processing ForumController#index (for 127.0.0.1 at 2010-08-12 23:33:50) [GET]
+  Parameters: {"page"=>"6"}
+  [4;36;1mPost Load (0.8ms)[0m   [0;1mSELECT * FROM "posts" ORDER BY created_at DESC LIMIT 2 OFFSET 10[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSELECT count(*) AS count_all FROM "posts" [0m
+Rendering template within layouts/application
+Rendering forum/index
+Completed in 31ms (View: 23, DB: 1) | 200 OK [http://localhost/forum?page=6]
+
+
+Processing ForumController#index (for 127.0.0.1 at 2010-08-12 23:33:52) [GET]
+  Parameters: {"page"=>"5"}
+  [4;36;1mPost Load (0.9ms)[0m   [0;1mSELECT * FROM "posts" ORDER BY created_at DESC LIMIT 2 OFFSET 8[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSELECT count(*) AS count_all FROM "posts" [0m
+Rendering template within layouts/application
+Rendering forum/index
+Completed in 36ms (View: 27, DB: 1) | 200 OK [http://localhost/forum?page=5]
+
+
+Processing ForumController#index (for 127.0.0.1 at 2010-08-12 23:33:53) [GET]
+  Parameters: {"page"=>"4"}
+  [4;36;1mPost Load (0.7ms)[0m   [0;1mSELECT * FROM "posts" ORDER BY created_at DESC LIMIT 2 OFFSET 6[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSELECT count(*) AS count_all FROM "posts" [0m
+Rendering template within layouts/application
+Rendering forum/index
+Completed in 85ms (View: 78, DB: 1) | 200 OK [http://localhost/forum?page=4]
+
+
+Processing ForumController#index (for 127.0.0.1 at 2010-08-12 23:33:55) [GET]
+  Parameters: {"page"=>"3"}
+  [4;36;1mPost Load (1.1ms)[0m   [0;1mSELECT * FROM "posts" ORDER BY created_at DESC LIMIT 2 OFFSET 4[0m
+  [4;35;1mSQL (0.2ms)[0m   [0mSELECT count(*) AS count_all FROM "posts" [0m
+Rendering template within layouts/application
+Rendering forum/index
+Completed in 34ms (View: 23, DB: 1) | 200 OK [http://localhost/forum?page=3]
+
+
+Processing ForumController#index (for 127.0.0.1 at 2010-08-12 23:33:57) [GET]
+  Parameters: {"page"=>"2"}
+  [4;36;1mPost Load (0.8ms)[0m   [0;1mSELECT * FROM "posts" ORDER BY created_at DESC LIMIT 2 OFFSET 2[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSELECT count(*) AS count_all FROM "posts" [0m
+Rendering template within layouts/application
+Rendering forum/index
+Completed in 89ms (View: 81, DB: 1) | 200 OK [http://localhost/forum?page=2]
+
+
+Processing PostsController#index (for 127.0.0.1 at 2010-08-13 00:58:26) [GET]
+  [4;36;1mUser Load (0.4ms)[0m   [0;1mSELECT * FROM "users" WHERE ("users"."id" = '1') LIMIT 1[0m
+Redirected to http://localhost:3000/login
+
+
+Processing UserSessionsController#new (for 127.0.0.1 at 2010-08-13 00:58:26) [GET]
+Rendering template within layouts/application
+Rendering user_sessions/new
+  [4;35;1mUser Load (0.5ms)[0m   [0mSELECT * FROM "users" WHERE ("users"."id" = '1') LIMIT 1[0m
+Completed in 38ms (View: 22, DB: 1) | 200 OK [http://localhost/login]
+
+
+Processing UserSessionsController#new (for 127.0.0.1 at 2010-08-13 00:58:32) [GET]
+Rendering template within layouts/application
+Rendering user_sessions/new
+  [4;36;1mUser Load (0.5ms)[0m   [0;1mSELECT * FROM "users" WHERE ("users"."id" = '1') LIMIT 1[0m
+Completed in 22ms (View: 7, DB: 0) | 200 OK [http://localhost/login]
+
+
+Processing UserSessionsController#create (for 127.0.0.1 at 2010-08-13 00:58:35) [POST]
+  Parameters: {"commit"=>"Save changes", "user_session"=>{"username"=>"admin", "password"=>"adminrocks"}, "authenticity_token"=>"O7oPE91+NdzYiGpjNIIRPj5VAePDkc4B6b08+7o35iQ="}
+  [4;35;1mUser Load (0.4ms)[0m   [0mSELECT * FROM "users" WHERE (LOWER("users".username) = 'admin') LIMIT 1[0m
+  [4;36;1mUser Update (0.4ms)[0m   [0;1mUPDATE "users" SET "login_count" = 25, "updated_at" = '2010-08-13 05:58:36', "last_login_at" = '2010-08-12 22:38:53', "current_login_at" = '2010-08-13 05:58:36' WHERE "id" = 3[0m
+Redirected to http://localhost:3000/posts
+Completed in 155ms (DB: 1) | 302 Found [http://localhost/user_sessions]
+
+
+Processing PostsController#index (for 127.0.0.1 at 2010-08-13 00:58:36) [GET]
+  [4;35;1mUser Load (0.4ms)[0m   [0mSELECT * FROM "users" WHERE ("users"."id" = '3') LIMIT 1[0m
+  [4;36;1mPost Load (1.4ms)[0m   [0;1mSELECT * FROM "posts" [0m
+Rendering template within layouts/application
+Rendering posts/index
+  [4;35;1mTag Load (0.2ms)[0m   [0mSELECT "tags".* FROM "tags" INNER JOIN "taggings" ON "tags".id = "taggings".tag_id WHERE (("taggings".taggable_id = 1) AND ("taggings".taggable_type = 'Post')) [0m
+  [4;36;1mTag Load (0.1ms)[0m   [0;1mSELECT "tags".* FROM "tags" INNER JOIN "taggings" ON "tags".id = "taggings".tag_id WHERE (("taggings".taggable_id = 2) AND ("taggings".taggable_type = 'Post')) [0m
+  [4;35;1mTag Load (0.1ms)[0m   [0mSELECT "tags".* FROM "tags" INNER JOIN "taggings" ON "tags".id = "taggings".tag_id WHERE (("taggings".taggable_id = 3) AND ("taggings".taggable_type = 'Post')) [0m
+  [4;36;1mTag Load (0.1ms)[0m   [0;1mSELECT "tags".* FROM "tags" INNER JOIN "taggings" ON "tags".id = "taggings".tag_id WHERE (("taggings".taggable_id = 4) AND ("taggings".taggable_type = 'Post')) [0m
+  [4;35;1mTag Load (0.1ms)[0m   [0mSELECT "tags".* FROM "tags" INNER JOIN "taggings" ON "tags".id = "taggings".tag_id WHERE (("taggings".taggable_id = 8) AND ("taggings".taggable_type = 'Post')) [0m
+  [4;36;1mTag Load (0.2ms)[0m   [0;1mSELECT "tags".* FROM "tags" INNER JOIN "taggings" ON "tags".id = "taggings".tag_id WHERE (("taggings".taggable_id = 9) AND ("taggings".taggable_type = 'Post')) [0m
+  [4;35;1mTag Load (0.1ms)[0m   [0mSELECT "tags".* FROM "tags" INNER JOIN "taggings" ON "tags".id = "taggings".tag_id WHERE (("taggings".taggable_id = 10) AND ("taggings".taggable_type = 'Post')) [0m
+  [4;36;1mTag Load (0.1ms)[0m   [0;1mSELECT "tags".* FROM "tags" INNER JOIN "taggings" ON "tags".id = "taggings".tag_id WHERE (("taggings".taggable_id = 11) AND ("taggings".taggable_type = 'Post')) [0m
+  [4;35;1mTag Load (0.2ms)[0m   [0mSELECT "tags".* FROM "tags" INNER JOIN "taggings" ON "tags".id = "taggings".tag_id WHERE (("taggings".taggable_id = 12) AND ("taggings".taggable_type = 'Post')) [0m
+  [4;36;1mTag Load (0.1ms)[0m   [0;1mSELECT "tags".* FROM "tags" INNER JOIN "taggings" ON "tags".id = "taggings".tag_id WHERE (("taggings".taggable_id = 13) AND ("taggings".taggable_type = 'Post')) [0m
+  [4;35;1mTag Load (0.1ms)[0m   [0mSELECT "tags".* FROM "tags" INNER JOIN "taggings" ON "tags".id = "taggings".tag_id WHERE (("taggings".taggable_id = 15) AND ("taggings".taggable_type = 'Post')) [0m
+  [4;36;1mTag Load (0.2ms)[0m   [0;1mSELECT "tags".* FROM "tags" INNER JOIN "taggings" ON "tags".id = "taggings".tag_id WHERE (("taggings".taggable_id = 16) AND ("taggings".taggable_type = 'Post')) [0m
+  [4;35;1mTag Load (0.4ms)[0m   [0mSELECT "tags".* FROM "tags" INNER JOIN "taggings" ON "tags".id = "taggings".tag_id WHERE (("taggings".taggable_id = 17) AND ("taggings".taggable_type = 'Post')) [0m
+  [4;36;1mTag Load (0.6ms)[0m   [0;1mSELECT "tags".* FROM "tags" INNER JOIN "taggings" ON "tags".id = "taggings".tag_id WHERE (("taggings".taggable_id = 18) AND ("taggings".taggable_type = 'Post')) [0m
+  [4;35;1mTag Load (0.3ms)[0m   [0mSELECT "tags".* FROM "tags" INNER JOIN "taggings" ON "tags".id = "taggings".tag_id WHERE (("taggings".taggable_id = 19) AND ("taggings".taggable_type = 'Post')) [0m
+  [4;36;1mTag Load (0.4ms)[0m   [0;1mSELECT "tags".* FROM "tags" INNER JOIN "taggings" ON "tags".id = "taggings".tag_id WHERE (("taggings".taggable_id = 20) AND ("taggings".taggable_type = 'Post')) [0m
+Completed in 86ms (View: 56, DB: 5) | 200 OK [http://localhost/posts]
+
+
+Processing UsersController#edit (for 127.0.0.1 at 2010-08-13 00:58:41) [GET]
+  Parameters: {"id"=>"3"}
+  [4;35;1mUser Load (0.4ms)[0m   [0mSELECT * FROM "users" WHERE ("users"."id" = '3') LIMIT 1[0m
+Rendering template within layouts/application
+Rendering users/edit
+Rendered users/_form (4.2ms)
+Completed in 38ms (View: 12, DB: 0) | 200 OK [http://localhost/users/3/edit]
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2010-08-13 00:58:41) [GET]
+
+ActionController::RoutingError (No route matches "/users/3/images/firefox-gray.jpg" with {:method=>:get}):
+  /Users/alexwang/.rvm/rubies/ruby-1.8.7-p299/lib/ruby/1.8/webrick/httpserver.rb:104:in `service'
+  /Users/alexwang/.rvm/rubies/ruby-1.8.7-p299/lib/ruby/1.8/webrick/httpserver.rb:65:in `run'
+  /Users/alexwang/.rvm/rubies/ruby-1.8.7-p299/lib/ruby/1.8/webrick/server.rb:173:in `start_thread'
+  /Users/alexwang/.rvm/rubies/ruby-1.8.7-p299/lib/ruby/1.8/webrick/server.rb:162:in `start'
+  /Users/alexwang/.rvm/rubies/ruby-1.8.7-p299/lib/ruby/1.8/webrick/server.rb:162:in `start_thread'
+  /Users/alexwang/.rvm/rubies/ruby-1.8.7-p299/lib/ruby/1.8/webrick/server.rb:95:in `start'
+  /Users/alexwang/.rvm/rubies/ruby-1.8.7-p299/lib/ruby/1.8/webrick/server.rb:92:in `each'
+  /Users/alexwang/.rvm/rubies/ruby-1.8.7-p299/lib/ruby/1.8/webrick/server.rb:92:in `start'
+  /Users/alexwang/.rvm/rubies/ruby-1.8.7-p299/lib/ruby/1.8/webrick/server.rb:23:in `start'
+  /Users/alexwang/.rvm/rubies/ruby-1.8.7-p299/lib/ruby/1.8/webrick/server.rb:82:in `start'
+
+Rendering rescues/layout (not_found)
+
+
+Processing UserSessionsController#destroy (for 127.0.0.1 at 2010-08-13 00:58:42) [GET]
+  [4;36;1mUser Load (0.6ms)[0m   [0;1mSELECT * FROM "users" WHERE ("users"."id" = '3') LIMIT 1[0m
+Redirected to http://localhost:3000/posts
+Completed in 22ms (DB: 1) | 302 Found [http://localhost/logout]
+
+
+Processing PostsController#index (for 127.0.0.1 at 2010-08-13 00:58:42) [GET]
+Redirected to http://localhost:3000/login
+
+
+Processing UserSessionsController#new (for 127.0.0.1 at 2010-08-13 00:58:42) [GET]
+Rendering template within layouts/application
+Rendering user_sessions/new
+Completed in 24ms (View: 8, DB: 0) | 200 OK [http://localhost/login]
+
+
+Processing UserSessionsController#new (for 127.0.0.1 at 2010-08-13 01:00:28) [GET]
+Rendering template within layouts/application
+Rendering user_sessions/new
+Completed in 32ms (View: 17, DB: 0) | 200 OK [http://localhost/login]
+
+
+Processing PostsController#index (for 127.0.0.1 at 2010-08-13 03:11:10) [GET]
+Redirected to http://localhost:3000/login
+
+
+Processing UserSessionsController#new (for 127.0.0.1 at 2010-08-13 03:11:10) [GET]
+Rendering template within layouts/application
+Rendering user_sessions/new
+Completed in 25ms (View: 13, DB: 0) | 200 OK [http://localhost/login]
+
+
+Processing UserSessionsController#create (for 127.0.0.1 at 2010-08-13 03:12:29) [POST]
+  Parameters: {"commit"=>"Save changes", "user_session"=>{"username"=>"admin", "password"=>"admin"}, "authenticity_token"=>"O7oPE91+NdzYiGpjNIIRPj5VAePDkc4B6b08+7o35iQ="}
+  [4;36;1mUser Load (0.4ms)[0m   [0;1mSELECT * FROM "users" WHERE (LOWER("users".username) = 'admin') LIMIT 1[0m
+  [4;35;1mUser Update (0.3ms)[0m   [0mUPDATE "users" SET "failed_login_count" = 1, "updated_at" = '2010-08-13 08:12:29' WHERE "id" = 3[0m
+Rendering template within layouts/application
+Rendering user_sessions/new
+Completed in 181ms (View: 6, DB: 1) | 200 OK [http://localhost/user_sessions]
+
+
+Processing UserSessionsController#create (for 127.0.0.1 at 2010-08-13 03:12:35) [POST]
+  Parameters: {"commit"=>"Save changes", "user_session"=>{"username"=>"admin", "password"=>"adminrocks"}, "authenticity_token"=>"O7oPE91+NdzYiGpjNIIRPj5VAePDkc4B6b08+7o35iQ="}
+  [4;36;1mUser Load (0.4ms)[0m   [0;1mSELECT * FROM "users" WHERE (LOWER("users".username) = 'admin') LIMIT 1[0m
+  [4;35;1mUser Update (0.3ms)[0m   [0mUPDATE "users" SET "login_count" = 26, "failed_login_count" = 0, "updated_at" = '2010-08-13 08:12:35', "last_login_at" = '2010-08-13 05:58:36', "current_login_at" = '2010-08-13 08:12:35' WHERE "id" = 3[0m
+Redirected to http://localhost:3000/posts
+Completed in 27ms (DB: 1) | 302 Found [http://localhost/user_sessions]
+
+
+Processing PostsController#index (for 127.0.0.1 at 2010-08-13 03:12:35) [GET]
+  [4;36;1mUser Load (0.4ms)[0m   [0;1mSELECT * FROM "users" WHERE ("users"."id" = '3') LIMIT 1[0m
+  [4;35;1mPost Load (1.0ms)[0m   [0mSELECT * FROM "posts" [0m
+Rendering template within layouts/application
+Rendering posts/index
+  [4;36;1mTag Load (0.2ms)[0m   [0;1mSELECT "tags".* FROM "tags" INNER JOIN "taggings" ON "tags".id = "taggings".tag_id WHERE (("taggings".taggable_id = 1) AND ("taggings".taggable_type = 'Post')) [0m
+  [4;35;1mTag Load (0.2ms)[0m   [0mSELECT "tags".* FROM "tags" INNER JOIN "taggings" ON "tags".id = "taggings".tag_id WHERE (("taggings".taggable_id = 2) AND ("taggings".taggable_type = 'Post')) [0m
+  [4;36;1mTag Load (0.1ms)[0m   [0;1mSELECT "tags".* FROM "tags" INNER JOIN "taggings" ON "tags".id = "taggings".tag_id WHERE (("taggings".taggable_id = 3) AND ("taggings".taggable_type = 'Post')) [0m
+  [4;35;1mTag Load (0.1ms)[0m   [0mSELECT "tags".* FROM "tags" INNER JOIN "taggings" ON "tags".id = "taggings".tag_id WHERE (("taggings".taggable_id = 4) AND ("taggings".taggable_type = 'Post')) [0m
+  [4;36;1mTag Load (0.1ms)[0m   [0;1mSELECT "tags".* FROM "tags" INNER JOIN "taggings" ON "tags".id = "taggings".tag_id WHERE (("taggings".taggable_id = 8) AND ("taggings".taggable_type = 'Post')) [0m
+  [4;35;1mTag Load (0.1ms)[0m   [0mSELECT "tags".* FROM "tags" INNER JOIN "taggings" ON "tags".id = "taggings".tag_id WHERE (("taggings".taggable_id = 9) AND ("taggings".taggable_type = 'Post')) [0m
+  [4;36;1mTag Load (0.1ms)[0m   [0;1mSELECT "tags".* FROM "tags" INNER JOIN "taggings" ON "tags".id = "taggings".tag_id WHERE (("taggings".taggable_id = 10) AND ("taggings".taggable_type = 'Post')) [0m
+  [4;35;1mTag Load (0.1ms)[0m   [0mSELECT "tags".* FROM "tags" INNER JOIN "taggings" ON "tags".id = "taggings".tag_id WHERE (("taggings".taggable_id = 11) AND ("taggings".taggable_type = 'Post')) [0m
+  [4;36;1mTag Load (0.1ms)[0m   [0;1mSELECT "tags".* FROM "tags" INNER JOIN "taggings" ON "tags".id = "taggings".tag_id WHERE (("taggings".taggable_id = 12) AND ("taggings".taggable_type = 'Post')) [0m
+  [4;35;1mTag Load (0.1ms)[0m   [0mSELECT "tags".* FROM "tags" INNER JOIN "taggings" ON "tags".id = "taggings".tag_id WHERE (("taggings".taggable_id = 13) AND ("taggings".taggable_type = 'Post')) [0m
+  [4;36;1mTag Load (0.1ms)[0m   [0;1mSELECT "tags".* FROM "tags" INNER JOIN "taggings" ON "tags".id = "taggings".tag_id WHERE (("taggings".taggable_id = 15) AND ("taggings".taggable_type = 'Post')) [0m
+  [4;35;1mTag Load (0.1ms)[0m   [0mSELECT "tags".* FROM "tags" INNER JOIN "taggings" ON "tags".id = "taggings".tag_id WHERE (("taggings".taggable_id = 16) AND ("taggings".taggable_type = 'Post')) [0m
+  [4;36;1mTag Load (0.2ms)[0m   [0;1mSELECT "tags".* FROM "tags" INNER JOIN "taggings" ON "tags".id = "taggings".tag_id WHERE (("taggings".taggable_id = 17) AND ("taggings".taggable_type = 'Post')) [0m
+  [4;35;1mTag Load (0.2ms)[0m   [0mSELECT "tags".* FROM "tags" INNER JOIN "taggings" ON "tags".id = "taggings".tag_id WHERE (("taggings".taggable_id = 18) AND ("taggings".taggable_type = 'Post')) [0m
+  [4;36;1mTag Load (0.2ms)[0m   [0;1mSELECT "tags".* FROM "tags" INNER JOIN "taggings" ON "tags".id = "taggings".tag_id WHERE (("taggings".taggable_id = 19) AND ("taggings".taggable_type = 'Post')) [0m
+  [4;35;1mTag Load (0.2ms)[0m   [0mSELECT "tags".* FROM "tags" INNER JOIN "taggings" ON "tags".id = "taggings".tag_id WHERE (("taggings".taggable_id = 20) AND ("taggings".taggable_type = 'Post')) [0m
+Completed in 126ms (View: 45, DB: 4) | 200 OK [http://localhost/posts]
+
+
+Processing ForumController#index (for 127.0.0.1 at 2010-08-13 03:12:48) [GET]
+  [4;36;1mPost Load (0.7ms)[0m   [0;1mSELECT * FROM "posts" ORDER BY created_at DESC LIMIT 2 OFFSET 0[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSELECT count(*) AS count_all FROM "posts" [0m
+Rendering template within layouts/application
+Rendering forum/index
+  [4;36;1mUser Load (0.4ms)[0m   [0;1mSELECT * FROM "users" WHERE ("users"."id" = '3') LIMIT 1[0m
+Completed in 92ms (View: 81, DB: 1) | 200 OK [http://localhost/forum]
+
+
+Processing ForumController#index (for 127.0.0.1 at 2010-08-13 03:12:56) [GET]
+  Parameters: {"page"=>"2"}
+  [4;35;1mPost Load (0.7ms)[0m   [0mSELECT * FROM "posts" ORDER BY created_at DESC LIMIT 2 OFFSET 2[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSELECT count(*) AS count_all FROM "posts" [0m
+Rendering template within layouts/application
+Rendering forum/index
+  [4;35;1mUser Load (0.4ms)[0m   [0mSELECT * FROM "users" WHERE ("users"."id" = '3') LIMIT 1[0m
+Completed in 27ms (View: 19, DB: 1) | 200 OK [http://localhost/forum?page=2]
+
+
+Processing ForumController#index (for 127.0.0.1 at 2010-08-13 03:14:31) [GET]
+  [4;36;1mPost Load (0.7ms)[0m   [0;1mSELECT * FROM "posts" ORDER BY created_at DESC LIMIT 2 OFFSET 0[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSELECT count(*) AS count_all FROM "posts" [0m
+Rendering template within layouts/application
+Rendering forum/index
+  [4;36;1mUser Load (0.4ms)[0m   [0;1mSELECT * FROM "users" WHERE ("users"."id" = '3') LIMIT 1[0m
+Completed in 26ms (View: 18, DB: 1) | 200 OK [http://localhost/forum]
+
+
+Processing ForumController#index (for 127.0.0.1 at 2010-08-13 03:14:41) [GET]
+  [4;35;1mPost Load (0.7ms)[0m   [0mSELECT * FROM "posts" ORDER BY created_at DESC LIMIT 2 OFFSET 0[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSELECT count(*) AS count_all FROM "posts" [0m
+Rendering template within layouts/application
+Rendering forum/index
+  [4;35;1mUser Load (0.4ms)[0m   [0mSELECT * FROM "users" WHERE ("users"."id" = '3') LIMIT 1[0m
+Completed in 86ms (View: 78, DB: 1) | 200 OK [http://localhost/forum]
+
+
+Processing ForumController#index (for 127.0.0.1 at 2010-08-13 03:14:50) [GET]
+  Parameters: {"page"=>"2"}
+  [4;36;1mPost Load (0.8ms)[0m   [0;1mSELECT * FROM "posts" ORDER BY created_at DESC LIMIT 2 OFFSET 2[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSELECT count(*) AS count_all FROM "posts" [0m
+Rendering template within layouts/application
+Rendering forum/index
+  [4;36;1mUser Load (0.4ms)[0m   [0;1mSELECT * FROM "users" WHERE ("users"."id" = '3') LIMIT 1[0m
+Completed in 93ms (View: 85, DB: 1) | 200 OK [http://localhost/forum?page=2]
+
+
+Processing ForumController#index (for 127.0.0.1 at 2010-08-13 03:14:53) [GET]
+  Parameters: {"page"=>"3"}
+  [4;35;1mPost Load (0.7ms)[0m   [0mSELECT * FROM "posts" ORDER BY created_at DESC LIMIT 2 OFFSET 4[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSELECT count(*) AS count_all FROM "posts" [0m
+Rendering template within layouts/application
+Rendering forum/index
+  [4;35;1mUser Load (0.4ms)[0m   [0mSELECT * FROM "users" WHERE ("users"."id" = '3') LIMIT 1[0m
+Completed in 26ms (View: 19, DB: 1) | 200 OK [http://localhost/forum?page=3]
+
+
+Processing ForumController#index (for 127.0.0.1 at 2010-08-13 03:15:18) [GET]
+  Parameters: {"page"=>"4"}
+  [4;36;1mPost Load (0.7ms)[0m   [0;1mSELECT * FROM "posts" ORDER BY created_at DESC LIMIT 2 OFFSET 6[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSELECT count(*) AS count_all FROM "posts" [0m
+Rendering template within layouts/application
+Rendering forum/index
+  [4;36;1mUser Load (0.4ms)[0m   [0;1mSELECT * FROM "users" WHERE ("users"."id" = '3') LIMIT 1[0m
+Completed in 90ms (View: 82, DB: 1) | 200 OK [http://localhost/forum?page=4]
+
+
+Processing UserSessionsController#destroy (for 127.0.0.1 at 2010-08-13 03:15:24) [GET]
+  [4;35;1mUser Load (0.4ms)[0m   [0mSELECT * FROM "users" WHERE ("users"."id" = '3') LIMIT 1[0m
+Redirected to http://localhost:3000/posts
+Completed in 17ms (DB: 0) | 302 Found [http://localhost/logout]
+
+
+Processing PostsController#index (for 127.0.0.1 at 2010-08-13 03:15:24) [GET]
+Redirected to http://localhost:3000/login
+
+
+Processing UserSessionsController#new (for 127.0.0.1 at 2010-08-13 03:15:25) [GET]
+Rendering template within layouts/application
+Rendering user_sessions/new
+Completed in 17ms (View: 4, DB: 0) | 200 OK [http://localhost/login]
+
+
+Processing UserSessionsController#new (for 127.0.0.1 at 2010-08-13 03:15:35) [GET]
+Rendering template within layouts/application
+Rendering user_sessions/new
+Completed in 16ms (View: 4, DB: 0) | 200 OK [http://localhost/login]
+
+
+Processing UserSessionsController#create (for 127.0.0.1 at 2010-08-13 03:15:39) [POST]
+  Parameters: {"commit"=>"Save changes", "user_session"=>{"username"=>"admin", "password"=>"adminrocks"}, "authenticity_token"=>"O7oPE91+NdzYiGpjNIIRPj5VAePDkc4B6b08+7o35iQ="}
+  [4;36;1mUser Load (0.4ms)[0m   [0;1mSELECT * FROM "users" WHERE (LOWER("users".username) = 'admin') LIMIT 1[0m
+  [4;35;1mUser Update (0.4ms)[0m   [0mUPDATE "users" SET "login_count" = 27, "updated_at" = '2010-08-13 08:15:39', "last_login_at" = '2010-08-13 08:12:35', "current_login_at" = '2010-08-13 08:15:39' WHERE "id" = 3[0m
+Redirected to http://localhost:3000/posts
+Completed in 24ms (DB: 1) | 302 Found [http://localhost/user_sessions]
+
+
+Processing PostsController#index (for 127.0.0.1 at 2010-08-13 03:15:39) [GET]
+  [4;36;1mUser Load (0.4ms)[0m   [0;1mSELECT * FROM "users" WHERE ("users"."id" = '3') LIMIT 1[0m
+  [4;35;1mPost Load (1.0ms)[0m   [0mSELECT * FROM "posts" [0m
+Rendering template within layouts/application
+Rendering posts/index
+  [4;36;1mTag Load (0.2ms)[0m   [0;1mSELECT "tags".* FROM "tags" INNER JOIN "taggings" ON "tags".id = "taggings".tag_id WHERE (("taggings".taggable_id = 1) AND ("taggings".taggable_type = 'Post')) [0m
+  [4;35;1mTag Load (0.1ms)[0m   [0mSELECT "tags".* FROM "tags" INNER JOIN "taggings" ON "tags".id = "taggings".tag_id WHERE (("taggings".taggable_id = 2) AND ("taggings".taggable_type = 'Post')) [0m
+  [4;36;1mTag Load (0.1ms)[0m   [0;1mSELECT "tags".* FROM "tags" INNER JOIN "taggings" ON "tags".id = "taggings".tag_id WHERE (("taggings".taggable_id = 3) AND ("taggings".taggable_type = 'Post')) [0m
+  [4;35;1mTag Load (0.1ms)[0m   [0mSELECT "tags".* FROM "tags" INNER JOIN "taggings" ON "tags".id = "taggings".tag_id WHERE (("taggings".taggable_id = 4) AND ("taggings".taggable_type = 'Post')) [0m
+  [4;36;1mTag Load (0.1ms)[0m   [0;1mSELECT "tags".* FROM "tags" INNER JOIN "taggings" ON "tags".id = "taggings".tag_id WHERE (("taggings".taggable_id = 8) AND ("taggings".taggable_type = 'Post')) [0m
+  [4;35;1mTag Load (0.2ms)[0m   [0mSELECT "tags".* FROM "tags" INNER JOIN "taggings" ON "tags".id = "taggings".tag_id WHERE (("taggings".taggable_id = 9) AND ("taggings".taggable_type = 'Post')) [0m
+  [4;36;1mTag Load (0.2ms)[0m   [0;1mSELECT "tags".* FROM "tags" INNER JOIN "taggings" ON "tags".id = "taggings".tag_id WHERE (("taggings".taggable_id = 10) AND ("taggings".taggable_type = 'Post')) [0m
+  [4;35;1mTag Load (0.1ms)[0m   [0mSELECT "tags".* FROM "tags" INNER JOIN "taggings" ON "tags".id = "taggings".tag_id WHERE (("taggings".taggable_id = 11) AND ("taggings".taggable_type = 'Post')) [0m
+  [4;36;1mTag Load (0.1ms)[0m   [0;1mSELECT "tags".* FROM "tags" INNER JOIN "taggings" ON "tags".id = "taggings".tag_id WHERE (("taggings".taggable_id = 12) AND ("taggings".taggable_type = 'Post')) [0m
+  [4;35;1mTag Load (0.1ms)[0m   [0mSELECT "tags".* FROM "tags" INNER JOIN "taggings" ON "tags".id = "taggings".tag_id WHERE (("taggings".taggable_id = 13) AND ("taggings".taggable_type = 'Post')) [0m
+  [4;36;1mTag Load (0.1ms)[0m   [0;1mSELECT "tags".* FROM "tags" INNER JOIN "taggings" ON "tags".id = "taggings".tag_id WHERE (("taggings".taggable_id = 15) AND ("taggings".taggable_type = 'Post')) [0m
+  [4;35;1mTag Load (0.1ms)[0m   [0mSELECT "tags".* FROM "tags" INNER JOIN "taggings" ON "tags".id = "taggings".tag_id WHERE (("taggings".taggable_id = 16) AND ("taggings".taggable_type = 'Post')) [0m
+  [4;36;1mTag Load (0.2ms)[0m   [0;1mSELECT "tags".* FROM "tags" INNER JOIN "taggings" ON "tags".id = "taggings".tag_id WHERE (("taggings".taggable_id = 17) AND ("taggings".taggable_type = 'Post')) [0m
+  [4;35;1mTag Load (0.1ms)[0m   [0mSELECT "tags".* FROM "tags" INNER JOIN "taggings" ON "tags".id = "taggings".tag_id WHERE (("taggings".taggable_id = 18) AND ("taggings".taggable_type = 'Post')) [0m
+  [4;36;1mTag Load (0.1ms)[0m   [0;1mSELECT "tags".* FROM "tags" INNER JOIN "taggings" ON "tags".id = "taggings".tag_id WHERE (("taggings".taggable_id = 19) AND ("taggings".taggable_type = 'Post')) [0m
+  [4;35;1mTag Load (0.2ms)[0m   [0mSELECT "tags".* FROM "tags" INNER JOIN "taggings" ON "tags".id = "taggings".tag_id WHERE (("taggings".taggable_id = 20) AND ("taggings".taggable_type = 'Post')) [0m
+Completed in 116ms (View: 92, DB: 3) | 200 OK [http://localhost/posts]
+
+
+Processing PostsController#new (for 127.0.0.1 at 2010-08-13 03:15:54) [GET]
+  [4;36;1mUser Load (0.4ms)[0m   [0;1mSELECT * FROM "users" WHERE ("users"."id" = '3') LIMIT 1[0m
+Rendering template within layouts/application
+Rendering posts/new
+Completed in 38ms (View: 13, DB: 0) | 200 OK [http://localhost/posts/new]
+
+
+Processing PostsController#images to jpg (for 127.0.0.1 at 2010-08-13 03:15:54) [GET]
+  Parameters: {"id"=>"firefox-gray"}
+  [4;35;1mUser Load (0.4ms)[0m   [0mSELECT * FROM "users" WHERE ("users"."id" = '3') LIMIT 1[0m
+
+ActionController::UnknownAction (No action responded to images. Actions: create, destroy, edit, index, new, show, and update):
+  /Users/alexwang/.rvm/rubies/ruby-1.8.7-p299/lib/ruby/1.8/webrick/httpserver.rb:104:in `service'
+  /Users/alexwang/.rvm/rubies/ruby-1.8.7-p299/lib/ruby/1.8/webrick/httpserver.rb:65:in `run'
+  /Users/alexwang/.rvm/rubies/ruby-1.8.7-p299/lib/ruby/1.8/webrick/server.rb:173:in `start_thread'
+  /Users/alexwang/.rvm/rubies/ruby-1.8.7-p299/lib/ruby/1.8/webrick/server.rb:162:in `start'
+  /Users/alexwang/.rvm/rubies/ruby-1.8.7-p299/lib/ruby/1.8/webrick/server.rb:162:in `start_thread'
+  /Users/alexwang/.rvm/rubies/ruby-1.8.7-p299/lib/ruby/1.8/webrick/server.rb:95:in `start'
+  /Users/alexwang/.rvm/rubies/ruby-1.8.7-p299/lib/ruby/1.8/webrick/server.rb:92:in `each'
+  /Users/alexwang/.rvm/rubies/ruby-1.8.7-p299/lib/ruby/1.8/webrick/server.rb:92:in `start'
+  /Users/alexwang/.rvm/rubies/ruby-1.8.7-p299/lib/ruby/1.8/webrick/server.rb:23:in `start'
+  /Users/alexwang/.rvm/rubies/ruby-1.8.7-p299/lib/ruby/1.8/webrick/server.rb:82:in `start'
+
+Rendering rescues/layout (not_found)
+
+
+Processing PostsController#new (for 127.0.0.1 at 2010-08-13 03:16:20) [GET]
+  [4;36;1mUser Load (0.4ms)[0m   [0;1mSELECT * FROM "users" WHERE ("users"."id" = '3') LIMIT 1[0m
+Rendering template within layouts/application
+Rendering posts/new
+Completed in 29ms (View: 8, DB: 0) | 200 OK [http://localhost/posts/new]
+
+
+Processing PostsController#images to jpg (for 127.0.0.1 at 2010-08-13 03:16:20) [GET]
+  Parameters: {"id"=>"firefox-gray"}
+  [4;35;1mUser Load (0.6ms)[0m   [0mSELECT * FROM "users" WHERE ("users"."id" = '3') LIMIT 1[0m
+
+ActionController::UnknownAction (No action responded to images. Actions: create, destroy, edit, index, new, show, and update):
+  /Users/alexwang/.rvm/rubies/ruby-1.8.7-p299/lib/ruby/1.8/webrick/httpserver.rb:104:in `service'
+  /Users/alexwang/.rvm/rubies/ruby-1.8.7-p299/lib/ruby/1.8/webrick/httpserver.rb:65:in `run'
+  /Users/alexwang/.rvm/rubies/ruby-1.8.7-p299/lib/ruby/1.8/webrick/server.rb:173:in `start_thread'
+  /Users/alexwang/.rvm/rubies/ruby-1.8.7-p299/lib/ruby/1.8/webrick/server.rb:162:in `start'
+  /Users/alexwang/.rvm/rubies/ruby-1.8.7-p299/lib/ruby/1.8/webrick/server.rb:162:in `start_thread'
+  /Users/alexwang/.rvm/rubies/ruby-1.8.7-p299/lib/ruby/1.8/webrick/server.rb:95:in `start'
+  /Users/alexwang/.rvm/rubies/ruby-1.8.7-p299/lib/ruby/1.8/webrick/server.rb:92:in `each'
+  /Users/alexwang/.rvm/rubies/ruby-1.8.7-p299/lib/ruby/1.8/webrick/server.rb:92:in `start'
+  /Users/alexwang/.rvm/rubies/ruby-1.8.7-p299/lib/ruby/1.8/webrick/server.rb:23:in `start'
+  /Users/alexwang/.rvm/rubies/ruby-1.8.7-p299/lib/ruby/1.8/webrick/server.rb:82:in `start'
+
+Rendering rescues/layout (not_found)
+
+
+Processing PostsController#new (for 127.0.0.1 at 2010-08-13 03:16:20) [GET]
+  [4;36;1mUser Load (0.4ms)[0m   [0;1mSELECT * FROM "users" WHERE ("users"."id" = '3') LIMIT 1[0m
+Rendering template within layouts/application
+Rendering posts/new
+Completed in 26ms (View: 5, DB: 0) | 200 OK [http://localhost/posts/new]
+
+
+Processing PostsController#images to jpg (for 127.0.0.1 at 2010-08-13 03:16:20) [GET]
+  Parameters: {"id"=>"firefox-gray"}
+  [4;35;1mUser Load (0.4ms)[0m   [0mSELECT * FROM "users" WHERE ("users"."id" = '3') LIMIT 1[0m
+
+ActionController::UnknownAction (No action responded to images. Actions: create, destroy, edit, index, new, show, and update):
+  /Users/alexwang/.rvm/rubies/ruby-1.8.7-p299/lib/ruby/1.8/webrick/httpserver.rb:104:in `service'
+  /Users/alexwang/.rvm/rubies/ruby-1.8.7-p299/lib/ruby/1.8/webrick/httpserver.rb:65:in `run'
+  /Users/alexwang/.rvm/rubies/ruby-1.8.7-p299/lib/ruby/1.8/webrick/server.rb:173:in `start_thread'
+  /Users/alexwang/.rvm/rubies/ruby-1.8.7-p299/lib/ruby/1.8/webrick/server.rb:162:in `start'
+  /Users/alexwang/.rvm/rubies/ruby-1.8.7-p299/lib/ruby/1.8/webrick/server.rb:162:in `start_thread'
+  /Users/alexwang/.rvm/rubies/ruby-1.8.7-p299/lib/ruby/1.8/webrick/server.rb:95:in `start'
+  /Users/alexwang/.rvm/rubies/ruby-1.8.7-p299/lib/ruby/1.8/webrick/server.rb:92:in `each'
+  /Users/alexwang/.rvm/rubies/ruby-1.8.7-p299/lib/ruby/1.8/webrick/server.rb:92:in `start'
+  /Users/alexwang/.rvm/rubies/ruby-1.8.7-p299/lib/ruby/1.8/webrick/server.rb:23:in `start'
+  /Users/alexwang/.rvm/rubies/ruby-1.8.7-p299/lib/ruby/1.8/webrick/server.rb:82:in `start'
+
+Rendering rescues/layout (not_found)
+
+
+Processing PostsController#new (for 127.0.0.1 at 2010-08-13 03:17:43) [GET]
+  [4;36;1mUser Load (0.4ms)[0m   [0;1mSELECT * FROM "users" WHERE ("users"."id" = '3') LIMIT 1[0m
+Rendering template within layouts/application
+Rendering posts/new
+Completed in 31ms (View: 10, DB: 0) | 200 OK [http://localhost/posts/new]
+
+
+Processing PostsController#images to jpg (for 127.0.0.1 at 2010-08-13 03:17:43) [GET]
+  Parameters: {"id"=>"firefox-gray"}
+  [4;35;1mUser Load (0.4ms)[0m   [0mSELECT * FROM "users" WHERE ("users"."id" = '3') LIMIT 1[0m
+
+ActionController::UnknownAction (No action responded to images. Actions: create, destroy, edit, index, new, show, and update):
+  /Users/alexwang/.rvm/rubies/ruby-1.8.7-p299/lib/ruby/1.8/webrick/httpserver.rb:104:in `service'
+  /Users/alexwang/.rvm/rubies/ruby-1.8.7-p299/lib/ruby/1.8/webrick/httpserver.rb:65:in `run'
+  /Users/alexwang/.rvm/rubies/ruby-1.8.7-p299/lib/ruby/1.8/webrick/server.rb:173:in `start_thread'
+  /Users/alexwang/.rvm/rubies/ruby-1.8.7-p299/lib/ruby/1.8/webrick/server.rb:162:in `start'
+  /Users/alexwang/.rvm/rubies/ruby-1.8.7-p299/lib/ruby/1.8/webrick/server.rb:162:in `start_thread'
+  /Users/alexwang/.rvm/rubies/ruby-1.8.7-p299/lib/ruby/1.8/webrick/server.rb:95:in `start'
+  /Users/alexwang/.rvm/rubies/ruby-1.8.7-p299/lib/ruby/1.8/webrick/server.rb:92:in `each'
+  /Users/alexwang/.rvm/rubies/ruby-1.8.7-p299/lib/ruby/1.8/webrick/server.rb:92:in `start'
+  /Users/alexwang/.rvm/rubies/ruby-1.8.7-p299/lib/ruby/1.8/webrick/server.rb:23:in `start'
+  /Users/alexwang/.rvm/rubies/ruby-1.8.7-p299/lib/ruby/1.8/webrick/server.rb:82:in `start'
+
+Rendering rescues/layout (not_found)
+
+
+Processing PostsController#new (for 127.0.0.1 at 2010-08-13 03:17:43) [GET]
+  [4;36;1mUser Load (0.4ms)[0m   [0;1mSELECT * FROM "users" WHERE ("users"."id" = '3') LIMIT 1[0m
+Rendering template within layouts/application
+Rendering posts/new
+Completed in 85ms (View: 6, DB: 0) | 200 OK [http://localhost/posts/new]
+
+
+Processing PostsController#images to jpg (for 127.0.0.1 at 2010-08-13 03:17:43) [GET]
+  Parameters: {"id"=>"firefox-gray"}
+  [4;35;1mUser Load (0.4ms)[0m   [0mSELECT * FROM "users" WHERE ("users"."id" = '3') LIMIT 1[0m
+
+ActionController::UnknownAction (No action responded to images. Actions: create, destroy, edit, index, new, show, and update):
+  /Users/alexwang/.rvm/rubies/ruby-1.8.7-p299/lib/ruby/1.8/webrick/httpserver.rb:104:in `service'
+  /Users/alexwang/.rvm/rubies/ruby-1.8.7-p299/lib/ruby/1.8/webrick/httpserver.rb:65:in `run'
+  /Users/alexwang/.rvm/rubies/ruby-1.8.7-p299/lib/ruby/1.8/webrick/server.rb:173:in `start_thread'
+  /Users/alexwang/.rvm/rubies/ruby-1.8.7-p299/lib/ruby/1.8/webrick/server.rb:162:in `start'
+  /Users/alexwang/.rvm/rubies/ruby-1.8.7-p299/lib/ruby/1.8/webrick/server.rb:162:in `start_thread'
+  /Users/alexwang/.rvm/rubies/ruby-1.8.7-p299/lib/ruby/1.8/webrick/server.rb:95:in `start'
+  /Users/alexwang/.rvm/rubies/ruby-1.8.7-p299/lib/ruby/1.8/webrick/server.rb:92:in `each'
+  /Users/alexwang/.rvm/rubies/ruby-1.8.7-p299/lib/ruby/1.8/webrick/server.rb:92:in `start'
+  /Users/alexwang/.rvm/rubies/ruby-1.8.7-p299/lib/ruby/1.8/webrick/server.rb:23:in `start'
+  /Users/alexwang/.rvm/rubies/ruby-1.8.7-p299/lib/ruby/1.8/webrick/server.rb:82:in `start'
+
+Rendering rescues/layout (not_found)
+
+
+Processing TagsController#index (for 127.0.0.1 at 2010-08-13 03:17:44) [GET]
+  [4;36;1mTag Load (0.6ms)[0m   [0;1mSELECT * FROM "tags" [0m
+Rendering template within layouts/application
+Rendering tags/index
+  [4;35;1mUser Load (0.4ms)[0m   [0mSELECT * FROM "users" WHERE ("users"."id" = '3') LIMIT 1[0m
+Completed in 107ms (View: 104, DB: 1) | 200 OK [http://localhost/tags]
+
+
+Processing TagsController#show (for 127.0.0.1 at 2010-08-13 03:17:49) [GET]
+  Parameters: {"id"=>"1"}
+  [4;36;1mTag Load (0.5ms)[0m   [0;1mSELECT * FROM "tags" WHERE ("tags"."id" = 1) [0m
+  [4;35;1mPost Load (0.4ms)[0m   [0mSELECT DISTINCT posts.* FROM "posts" INNER JOIN taggings posts_taggings ON posts_taggings.taggable_id = posts.id AND posts_taggings.taggable_type = 'Post' INNER JOIN tags posts_tags ON posts_tags.id = posts_taggings.tag_id WHERE ((posts_tags.name LIKE 'tagss')) [0m
+Rendering template within layouts/application
+Rendering tags/show
+  [4;36;1mUser Load (0.4ms)[0m   [0;1mSELECT * FROM "users" WHERE ("users"."id" = '3') LIMIT 1[0m
+Completed in 28ms (View: 21, DB: 1) | 200 OK [http://localhost/tags/1]
+
+
+Processing TagsController#images to jpg (for 127.0.0.1 at 2010-08-13 03:17:49) [GET]
+  Parameters: {"id"=>"firefox-gray"}
+
+ActionController::UnknownAction (No action responded to images. Actions: index and show):
+  /Users/alexwang/.rvm/rubies/ruby-1.8.7-p299/lib/ruby/1.8/webrick/httpserver.rb:104:in `service'
+  /Users/alexwang/.rvm/rubies/ruby-1.8.7-p299/lib/ruby/1.8/webrick/httpserver.rb:65:in `run'
+  /Users/alexwang/.rvm/rubies/ruby-1.8.7-p299/lib/ruby/1.8/webrick/server.rb:173:in `start_thread'
+  /Users/alexwang/.rvm/rubies/ruby-1.8.7-p299/lib/ruby/1.8/webrick/server.rb:162:in `start'
+  /Users/alexwang/.rvm/rubies/ruby-1.8.7-p299/lib/ruby/1.8/webrick/server.rb:162:in `start_thread'
+  /Users/alexwang/.rvm/rubies/ruby-1.8.7-p299/lib/ruby/1.8/webrick/server.rb:95:in `start'
+  /Users/alexwang/.rvm/rubies/ruby-1.8.7-p299/lib/ruby/1.8/webrick/server.rb:92:in `each'
+  /Users/alexwang/.rvm/rubies/ruby-1.8.7-p299/lib/ruby/1.8/webrick/server.rb:92:in `start'
+  /Users/alexwang/.rvm/rubies/ruby-1.8.7-p299/lib/ruby/1.8/webrick/server.rb:23:in `start'
+  /Users/alexwang/.rvm/rubies/ruby-1.8.7-p299/lib/ruby/1.8/webrick/server.rb:82:in `start'
+
+Rendering rescues/layout (not_found)
+
+
+Processing PostsController#show to html (for 127.0.0.1 at 2010-08-13 03:17:57) [GET]
+  Parameters: {"id"=>"index"}
+  [4;35;1mUser Load (0.4ms)[0m   [0mSELECT * FROM "users" WHERE ("users"."id" = '3') LIMIT 1[0m
+  [4;36;1mPost Load (0.1ms)[0m   [0;1mSELECT * FROM "posts" WHERE ("posts"."id" = 0) [0m
+
+ActiveRecord::RecordNotFound (Couldn't find Post with ID=index):
+  app/controllers/posts_controller.rb:22:in `show'
+  /Users/alexwang/.rvm/rubies/ruby-1.8.7-p299/lib/ruby/1.8/webrick/httpserver.rb:104:in `service'
+  /Users/alexwang/.rvm/rubies/ruby-1.8.7-p299/lib/ruby/1.8/webrick/httpserver.rb:65:in `run'
+  /Users/alexwang/.rvm/rubies/ruby-1.8.7-p299/lib/ruby/1.8/webrick/server.rb:173:in `start_thread'
+  /Users/alexwang/.rvm/rubies/ruby-1.8.7-p299/lib/ruby/1.8/webrick/server.rb:162:in `start'
+  /Users/alexwang/.rvm/rubies/ruby-1.8.7-p299/lib/ruby/1.8/webrick/server.rb:162:in `start_thread'
+  /Users/alexwang/.rvm/rubies/ruby-1.8.7-p299/lib/ruby/1.8/webrick/server.rb:95:in `start'
+  /Users/alexwang/.rvm/rubies/ruby-1.8.7-p299/lib/ruby/1.8/webrick/server.rb:92:in `each'
+  /Users/alexwang/.rvm/rubies/ruby-1.8.7-p299/lib/ruby/1.8/webrick/server.rb:92:in `start'
+  /Users/alexwang/.rvm/rubies/ruby-1.8.7-p299/lib/ruby/1.8/webrick/server.rb:23:in `start'
+  /Users/alexwang/.rvm/rubies/ruby-1.8.7-p299/lib/ruby/1.8/webrick/server.rb:82:in `start'
+
+Rendered rescues/_trace (24.2ms)
+Rendered rescues/_request_and_response (1.0ms)
+Rendering rescues/layout (not_found)
+
+
+Processing PostsController#show to html (for 127.0.0.1 at 2010-08-13 03:18:13) [GET]
+  Parameters: {"id"=>"index"}
+  [4;35;1mUser Load (0.4ms)[0m   [0mSELECT * FROM "users" WHERE ("users"."id" = '3') LIMIT 1[0m
+  [4;36;1mPost Load (0.1ms)[0m   [0;1mSELECT * FROM "posts" WHERE ("posts"."id" = 0) [0m
+
+ActiveRecord::RecordNotFound (Couldn't find Post with ID=index):
+  app/controllers/posts_controller.rb:22:in `show'
+  /Users/alexwang/.rvm/rubies/ruby-1.8.7-p299/lib/ruby/1.8/webrick/httpserver.rb:104:in `service'
+  /Users/alexwang/.rvm/rubies/ruby-1.8.7-p299/lib/ruby/1.8/webrick/httpserver.rb:65:in `run'
+  /Users/alexwang/.rvm/rubies/ruby-1.8.7-p299/lib/ruby/1.8/webrick/server.rb:173:in `start_thread'
+  /Users/alexwang/.rvm/rubies/ruby-1.8.7-p299/lib/ruby/1.8/webrick/server.rb:162:in `start'
+  /Users/alexwang/.rvm/rubies/ruby-1.8.7-p299/lib/ruby/1.8/webrick/server.rb:162:in `start_thread'
+  /Users/alexwang/.rvm/rubies/ruby-1.8.7-p299/lib/ruby/1.8/webrick/server.rb:95:in `start'
+  /Users/alexwang/.rvm/rubies/ruby-1.8.7-p299/lib/ruby/1.8/webrick/server.rb:92:in `each'
+  /Users/alexwang/.rvm/rubies/ruby-1.8.7-p299/lib/ruby/1.8/webrick/server.rb:92:in `start'
+  /Users/alexwang/.rvm/rubies/ruby-1.8.7-p299/lib/ruby/1.8/webrick/server.rb:23:in `start'
+  /Users/alexwang/.rvm/rubies/ruby-1.8.7-p299/lib/ruby/1.8/webrick/server.rb:82:in `start'
+
+Rendered rescues/_trace (24.1ms)
+Rendered rescues/_request_and_response (0.3ms)
+Rendering rescues/layout (not_found)
+
+
+Processing PostsController#new (for 127.0.0.1 at 2010-08-13 03:18:49) [GET]
+  [4;35;1mUser Load (0.4ms)[0m   [0mSELECT * FROM "users" WHERE ("users"."id" = '3') LIMIT 1[0m
+Rendering template within layouts/application
+Rendering posts/new
+Completed in 32ms (View: 10, DB: 0) | 200 OK [http://localhost/posts/new]
+
+
+Processing PostsController#images to jpg (for 127.0.0.1 at 2010-08-13 03:18:49) [GET]
+  Parameters: {"id"=>"firefox-gray"}
+  [4;36;1mUser Load (0.8ms)[0m   [0;1mSELECT * FROM "users" WHERE ("users"."id" = '3') LIMIT 1[0m
+
+ActionController::UnknownAction (No action responded to images. Actions: create, destroy, edit, index, new, show, and update):
+  /Users/alexwang/.rvm/rubies/ruby-1.8.7-p299/lib/ruby/1.8/webrick/httpserver.rb:104:in `service'
+  /Users/alexwang/.rvm/rubies/ruby-1.8.7-p299/lib/ruby/1.8/webrick/httpserver.rb:65:in `run'
+  /Users/alexwang/.rvm/rubies/ruby-1.8.7-p299/lib/ruby/1.8/webrick/server.rb:173:in `start_thread'
+  /Users/alexwang/.rvm/rubies/ruby-1.8.7-p299/lib/ruby/1.8/webrick/server.rb:162:in `start'
+  /Users/alexwang/.rvm/rubies/ruby-1.8.7-p299/lib/ruby/1.8/webrick/server.rb:162:in `start_thread'
+  /Users/alexwang/.rvm/rubies/ruby-1.8.7-p299/lib/ruby/1.8/webrick/server.rb:95:in `start'
+  /Users/alexwang/.rvm/rubies/ruby-1.8.7-p299/lib/ruby/1.8/webrick/server.rb:92:in `each'
+  /Users/alexwang/.rvm/rubies/ruby-1.8.7-p299/lib/ruby/1.8/webrick/server.rb:92:in `start'
+  /Users/alexwang/.rvm/rubies/ruby-1.8.7-p299/lib/ruby/1.8/webrick/server.rb:23:in `start'
+  /Users/alexwang/.rvm/rubies/ruby-1.8.7-p299/lib/ruby/1.8/webrick/server.rb:82:in `start'
+
+Rendering rescues/layout (not_found)
+
+
+Processing ForumController#index (for 127.0.0.1 at 2010-08-13 03:19:12) [GET]
+  [4;35;1mPost Load (0.7ms)[0m   [0mSELECT * FROM "posts" ORDER BY created_at DESC LIMIT 2 OFFSET 0[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSELECT count(*) AS count_all FROM "posts" [0m
+Rendering template within layouts/application
+Rendering forum/index
+  [4;35;1mUser Load (0.4ms)[0m   [0mSELECT * FROM "users" WHERE ("users"."id" = '3') LIMIT 1[0m
+Completed in 27ms (View: 19, DB: 1) | 200 OK [http://localhost/forum]
+
+
+Processing ForumController#index (for 127.0.0.1 at 2010-08-13 03:19:28) [GET]
+  [4;36;1mPost Load (0.9ms)[0m   [0;1mSELECT * FROM "posts" ORDER BY created_at DESC LIMIT 8 OFFSET 0[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSELECT count(*) AS count_all FROM "posts" [0m
+Rendering template within layouts/application
+Rendering forum/index
+  [4;36;1mUser Load (0.4ms)[0m   [0;1mSELECT * FROM "users" WHERE ("users"."id" = '3') LIMIT 1[0m
+Completed in 98ms (View: 90, DB: 1) | 200 OK [http://localhost/forum]
+
+
+Processing ForumController#index (for 127.0.0.1 at 2010-08-13 03:19:28) [GET]
+  [4;35;1mPost Load (1.0ms)[0m   [0mSELECT * FROM "posts" ORDER BY created_at DESC LIMIT 8 OFFSET 0[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSELECT count(*) AS count_all FROM "posts" [0m
+Rendering template within layouts/application
+Rendering forum/index
+  [4;35;1mUser Load (0.4ms)[0m   [0mSELECT * FROM "users" WHERE ("users"."id" = '3') LIMIT 1[0m
+Completed in 26ms (View: 19, DB: 1) | 200 OK [http://localhost/forum]
+
+
+Processing ForumController#index (for 127.0.0.1 at 2010-08-13 03:19:42) [GET]
+  Parameters: {"page"=>"2"}
+  [4;36;1mPost Load (1.1ms)[0m   [0;1mSELECT * FROM "posts" ORDER BY created_at DESC LIMIT 8 OFFSET 8[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSELECT count(*) AS count_all FROM "posts" [0m
+Rendering template within layouts/application
+Rendering forum/index
+  [4;36;1mUser Load (0.4ms)[0m   [0;1mSELECT * FROM "users" WHERE ("users"."id" = '3') LIMIT 1[0m
+Completed in 26ms (View: 18, DB: 2) | 200 OK [http://localhost/forum?page=2]
+
+
+Processing ForumController#index (for 127.0.0.1 at 2010-08-13 03:20:51) [GET]
+  [4;35;1mPost Load (1.0ms)[0m   [0mSELECT * FROM "posts" ORDER BY created_at DESC LIMIT 8 OFFSET 0[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSELECT count(*) AS count_all FROM "posts" [0m
+Rendering template within layouts/application
+Rendering forum/index
+  [4;35;1mUser Load (0.4ms)[0m   [0mSELECT * FROM "users" WHERE ("users"."id" = '3') LIMIT 1[0m
+Completed in 85ms (View: 77, DB: 2) | 200 OK [http://localhost/forum]
+
+
+Processing ForumController#index (for 127.0.0.1 at 2010-08-13 03:25:52) [GET]
+  [4;36;1mPost Load (1.1ms)[0m   [0;1mSELECT * FROM "posts" ORDER BY created_at DESC LIMIT 8 OFFSET 0[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSELECT count(*) AS count_all FROM "posts" [0m
+Rendering template within layouts/application
+Rendering forum/index
+Completed in 78ms (View: 70, DB: 1) | 200 OK [http://localhost/forum]
+
+
+Processing ForumController#index (for 127.0.0.1 at 2010-08-13 03:32:04) [GET]
+  [4;36;1mPost Load (1.3ms)[0m   [0;1mSELECT * FROM "posts" ORDER BY created_at DESC LIMIT 8 OFFSET 0[0m
+  [4;35;1mSQL (0.2ms)[0m   [0mSELECT count(*) AS count_all FROM "posts" [0m
+Rendering template within layouts/application
+Rendering forum/index
+  [4;36;1mUser Load (0.6ms)[0m   [0;1mSELECT * FROM "users" WHERE ("users"."id" = '3') LIMIT 1[0m
+Completed in 45ms (View: 35, DB: 2) | 200 OK [http://localhost/]
+
+
+Processing Rails::InfoController#properties (for 127.0.0.1 at 2010-08-13 03:32:46) [GET]
+  [4;36;1mSQL (0.9ms)[0m   [0;1m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [4;35;1mSQL (0.2ms)[0m   [0mSELECT version FROM schema_migrations[0m
+Completed in 113ms (View: 14, DB: 1) | 200 OK [http://localhost/rails/info/properties]
+
+
+Processing Rails::InfoController#properties (for 127.0.0.1 at 2010-08-13 03:45:26) [GET]
+  [4;36;1mSQL (0.8ms)[0m   [0;1m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [4;35;1mSQL (0.2ms)[0m   [0mSELECT version FROM schema_migrations[0m
+Completed in 57ms (View: 2, DB: 1) | 200 OK [http://localhost/rails/info/properties]

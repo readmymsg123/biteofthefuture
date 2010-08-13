@@ -1,17 +1,19 @@
 ActionController::Routing::Routes.draw do |map|
 
 
+  map.root :controller => 'forum', :action => 'index'
   map.resources :user_sessions
 
   map.resources :users
+
 
   map.resources :posts, :has_many => :comments
   map.resources :tags, :has_many => :posts
   map.login "login", :controller => "user_sessions", :action => "new"
   map.logout "logout", :controller => "user_sessions", :action => "destroy"
-  map.forum 'forum', :controller => "forum", :action => "index"
-  map.connect '/users/current/show', :controller => "users", :action => "show"
   
+  map.connect '/users/current/show', :controller => "users", :action => "show"
+
   map.resources :users do |users|
     users.resources :messages, :collection => { :delete_selected => :post }
   end
