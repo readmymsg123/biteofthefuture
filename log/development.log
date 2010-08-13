@@ -13413,3 +13413,30 @@ Processing Rails::InfoController#properties (for 127.0.0.1 at 2010-08-13 03:45:2
 [0m
   [4;35;1mSQL (0.2ms)[0m   [0mSELECT version FROM schema_migrations[0m
 Completed in 57ms (View: 2, DB: 1) | 200 OK [http://localhost/rails/info/properties]
+
+
+Processing ForumController#index (for 127.0.0.1 at 2010-08-13 03:46:06) [GET]
+  [4;36;1mPost Load (1.3ms)[0m   [0;1mSELECT * FROM "posts" ORDER BY created_at DESC LIMIT 8 OFFSET 0[0m
+  [4;35;1mSQL (0.2ms)[0m   [0mSELECT count(*) AS count_all FROM "posts" [0m
+Rendering template within layouts/application
+Rendering forum/index
+  [4;36;1mUser Load (0.4ms)[0m   [0;1mSELECT * FROM "users" WHERE ("users"."id" = '3') LIMIT 1[0m
+Completed in 43ms (View: 33, DB: 2) | 200 OK [http://localhost/]
+
+
+Processing ForumController#index (for 127.0.0.1 at 2010-08-13 03:46:06) [GET]
+  [4;35;1mPost Load (1.0ms)[0m   [0mSELECT * FROM "posts" ORDER BY created_at DESC LIMIT 8 OFFSET 0[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSELECT count(*) AS count_all FROM "posts" [0m
+Rendering template within layouts/application
+Rendering forum/index
+  [4;35;1mUser Load (0.4ms)[0m   [0mSELECT * FROM "users" WHERE ("users"."id" = '3') LIMIT 1[0m
+Completed in 76ms (View: 68, DB: 2) | 200 OK [http://localhost/]
+
+
+Processing ForumController#index (for 127.0.0.1 at 2010-08-13 03:46:07) [GET]
+  [4;36;1mPost Load (1.4ms)[0m   [0;1mSELECT * FROM "posts" ORDER BY created_at DESC LIMIT 8 OFFSET 0[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSELECT count(*) AS count_all FROM "posts" [0m
+Rendering template within layouts/application
+Rendering forum/index
+  [4;36;1mUser Load (0.4ms)[0m   [0;1mSELECT * FROM "users" WHERE ("users"."id" = '3') LIMIT 1[0m
+Completed in 36ms (View: 25, DB: 2) | 200 OK [http://localhost/]
